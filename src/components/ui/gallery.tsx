@@ -84,7 +84,7 @@ export const PhotoGallery = ({
       y: "32px",
       zIndex: 40,
       direction: "left" as Direction,
-      src: "https://ik.imagekit.io/soumya3301/8.png?updatedAt=1750483597465",
+      src: "https://ik.imagekit.io/soumya3301/p10.jpg?updatedAt=1753373684828",
     },
     {
       id: 3,
@@ -93,7 +93,7 @@ export const PhotoGallery = ({
       y: "8px",
       zIndex: 30,
       direction: "right" as Direction,
-      src: "https://ik.imagekit.io/soumya3301/7.png?updatedAt=1750483598632",
+      src: "https://ik.imagekit.io/soumya3301/bln37.jpg?updatedAt=1753373682988",
     },
     {
       id: 4,
@@ -116,7 +116,7 @@ export const PhotoGallery = ({
   ];
 
   return (
-    <div className="mt-8 sm:mt-12 relative">
+    <div className="mt-8 sm:mt-12 relative z-0 photo-gallery-container">
        <div className="absolute inset-0 max-md:hidden top-[200px] -z-10 h-[300px] w-full bg-transparent bg-[linear-gradient(to_right,#57534e_1px,transparent_1px),linear-gradient(to_bottom,#57534e_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
       <p className="lg:text-md mb-2 mt-4 text-center text-xs font-light uppercase tracking-widest text-slate-600 px-4">
         A Journey Through Visual Stories

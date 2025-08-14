@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Gem, ChevronDown } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +44,7 @@ const Header = () => {
       document.body.style.overflow = '';
     };
   }, [isMenuOpen]);
+
   const navItems = [
     { name: 'Features', href: '#features' },
     { name: 'How It Works', href: '#how-it-works' },
@@ -51,12 +54,38 @@ const Header = () => {
 
   const handleNavClick = (href: string) => {
     setIsMenuOpen(false);
-    // Smooth scroll to section
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    
+    if (href.startsWith('#')) {
+      // If we're not on the homepage, navigate there first
+      if (location.pathname !== '/') {
+        window.location.href = `/${href}`;
+        return;
+      }
+      
+      // Smooth scroll to section on homepage
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
+
+  const handleCTAClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // If we're not on the homepage, navigate there first
+    if (location.pathname !== '/') {
+      window.location.href = '/#pricing';
+      return;
+    }
+    
+    // Smooth scroll to pricing section on homepage
+    const pricingElement = document.querySelector('#pricing');
+    if (pricingElement) {
+      pricingElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 mobile-menu-container ${
       isScrolled 
@@ -103,10 +132,9 @@ const Header = () => {
           {/* Desktop CTA Button */}
           <div className="hidden lg:block">
             <a 
-              href="https://checkout.dodopayments.com/buy/pdt_rbD4D5ZCYfTy2cREbI1yW?quantity=1&redirect_url=https://wa.link%2F87jro9"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#pricing"
               className="bg-gradient-to-r from-amber-500 to-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-amber-600 hover:to-yellow-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-sm xl:text-base"
+              onClick={handleCTAClick}
             >
               <span className="hidden xl:inline">Start Your AI Photoshoot</span>
               <span className="xl:hidden">Get Started</span>
@@ -174,11 +202,13 @@ const Header = () => {
               {/* Mobile CTA Button */}
               <div className="px-4 pt-6 pb-2">
                 <a 
-                  href="https://checkout.dodopayments.com/buy/pdt_rbD4D5ZCYfTy2cREbI1yW?quantity=1&redirect_url=https://wa.link%2F87jro9"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#pricing"
                   className="block w-full bg-gradient-to-r from-amber-500 to-yellow-600 text-white px-6 py-4 rounded-xl font-semibold hover:from-amber-600 hover:to-yellow-700 transition-all duration-200 text-center text-lg shadow-lg touch-manipulation"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleCTAClick(e);
+                    setIsMenuOpen(false);
+                  }}
                 >
                   Start Your AI Photoshoot
                 </a>

@@ -40,6 +40,58 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
+/* Z-index stacking context fixes */
+footer {
+  position: relative;
+  z-index: 10;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+main {
+  position: relative;
+  z-index: 0;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Ensure proper stacking for gallery components */
+.gallery-section {
+  position: relative;
+  z-index: 0;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Prevent footer overlap during scroll animations */
+.photo-gallery-container {
+  position: relative;
+  z-index: 0;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Ensure modal stays on top */
+.modal-overlay {
+  z-index: 9999;
+}
+
+/* Prevent GSAP Flip positioning issues */
+[data-flip] {
+  position: relative !important;
+  transform: translateZ(0) !important; /* Force hardware acceleration */
+}
+
+/* Ensure proper stacking during animations */
+.flip-reveal-container {
+  position: relative;
+  z-index: 0;
+  transform: translateZ(0);
+}
+
+/* Prevent any absolute positioning issues during scroll */
+.gallery-grid-container {
+  position: relative;
+  z-index: 0;
+  transform: translateZ(0);
+}
+
 @layer utilities {
   /* Dynamic gradient animation */
   .animate-gradient-x {

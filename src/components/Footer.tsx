@@ -1,10 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Gem, Instagram, MessageSquare, Mail, ArrowRight, Send } from 'lucide-react';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
+
+  useEffect(() => {
+    // Ensure footer never overlaps content
+    const ensureFooterPosition = () => {
+      const footer = document.querySelector('footer');
+      if (footer) {
+        footer.style.position = 'relative';
+        footer.style.zIndex = '10';
+        footer.style.transform = 'translateZ(0)';
+        footer.style.willChange = 'transform';
+      }
+    };
+
+    // Call immediately and on scroll
+    ensureFooterPosition();
+    window.addEventListener('scroll', ensureFooterPosition, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', ensureFooterPosition);
+    };
+  }, []);
 
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,7 +39,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden z-10" style={{ willChange: 'transform' }}>
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-r from-amber-900/10 to-yellow-900/10"></div>
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-amber-500/5 to-yellow-600/5 rounded-full blur-3xl"></div>
@@ -82,11 +103,11 @@ const Footer = () => {
               </Link>
               
               <Link 
-                                        to="/gallery"
+                to="/gallery"
                 className="group flex items-center space-x-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 touch-manipulation py-1"
               >
                 <div className="w-2 h-2 bg-amber-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-                                    <span className="text-sm sm:text-base">Gallery</span>
+                <span className="text-sm sm:text-base">Gallery</span>
                 <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
               </Link>
               

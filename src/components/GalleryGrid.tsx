@@ -352,7 +352,7 @@ const GalleryGrid = () => {
     id: 51,
     category: "photos",
     type: "image",
-    src: "https://ik.imagekit.io/soumya3301/u9153988912_An_upside-down_melting_vanilla_ice_cream_cone_wit_cd10fd0d-0122-4ab3-84ea-f87bc7b6388e_0.png",
+    src: "https://ik.imagekit.io/soumya3301/p10.jpg?updatedAt=1753373684828",
     alt: "AI-generated jewelry photography"
 },
 {
@@ -663,6 +663,251 @@ const GalleryGrid = () => {
     src: "https://ik.imagekit.io/soumya3301/binder2.jpg",
     alt: "AI-generated jewelry photography"
 },
+{
+    id: 96,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/WhatsApp%20Image%202025-08-12%20at%2011.27.28%20PM.jpeg?updatedAt=1755161816356",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 97,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/WhatsApp%20Image%202025-08-12%20at%2011.22.21%20PM.jpeg?updatedAt=1755161816354",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 98,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/WhatsApp%20Image%202025-08-12%20at%209.33.43%20PM.jpeg?updatedAt=1755161816394",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 99,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/WhatsApp%20Image%202025-08-12%20at%2010.39.51%20PM.jpeg?updatedAt=1755161816420",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 100,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/ai_0e0dc0baca.jpg?updatedAt=1755161822290",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 101,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/SZ2.png?updatedAt=1755161822662",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 102,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/u6.png?updatedAt=1755161823097",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 103,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/U2.png?updatedAt=1755161823149",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 104,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/U3.png?updatedAt=1755161823366",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 105,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/pp3.png?updatedAt=1755161824422",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 106,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/U1.png?updatedAt=1755161824858",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 107,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/pp1.png?updatedAt=1755161824955",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 108,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/pp2.png?updatedAt=1755161824981",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 109,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/U4.png?updatedAt=1755161825143",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 110,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/ai_ice_cream_ring4.png?updatedAt=1755161827449",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 111,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/ai_ice_cream_ring1.png?updatedAt=1755161827639",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 112,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/marika1.png?updatedAt=1755161828326",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 113,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/marika2.png?updatedAt=1755161839703",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 114,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/pht.png?updatedAt=1755161840411",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 115,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/rubX.png?updatedAt=1755161840437",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 116,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/tokyo4.png?updatedAt=1755161840746",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 117,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/daniela%20taped.png?updatedAt=1755161840785",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 118,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/ai90942.png?updatedAt=1755161840904",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 119,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/tokyo3.png?updatedAt=1755161840957",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 120,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/w5.png?updatedAt=1755161845056",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 121,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/w6.png?updatedAt=1755161846876",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 122,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/w8.png?updatedAt=1755161848063",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 123,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/gr2.png?updatedAt=1755161850025",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 124,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/gr3.png?updatedAt=1755161851484",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 125,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x5.png?updatedAt=1755161851877",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 126,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x6.png?updatedAt=1755161852392",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 127,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x2%20(1).png?updatedAt=1755161852455",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 128,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/D2.png?updatedAt=1755161855855",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 129,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/P7.png?updatedAt=1755161855099",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 130,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/P1%20(1).png?updatedAt=1755161855012",
+    alt: "AI-generated jewelry photography"
+},
 
         // Videos - Add your video URLs here
         {
@@ -949,7 +1194,7 @@ const GalleryGrid = () => {
         : shuffledItems.filter(item => item.category === selectedCategory);
 
     return (
-        <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white to-gray-50">
+        <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white to-gray-50 relative z-0 gallery-section">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16">
@@ -993,7 +1238,7 @@ const GalleryGrid = () => {
 
                 {/* Gallery Grid with Flip Animation - 4:5 Aspect Ratio */}
                 <FlipReveal 
-                    className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8 px-4 sm:px-0" 
+                    className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8 px-4 sm:px-0 flip-reveal-container gallery-grid-container" 
                     keys={[selectedCategory]} 
                     showClass="flex" 
                     hideClass="hidden"
@@ -1126,7 +1371,7 @@ const GalleryGrid = () => {
             {/* Enhanced Media Preview Modal for Mobile */}
             {selectedMedia && (
                 <div 
-                    className="fixed inset-0 z-[9999] flex items-center justify-center transition-opacity duration-300"
+                    className="fixed inset-0 z-[9999] flex items-center justify-center transition-opacity duration-300 modal-overlay"
                     style={{ 
                         touchAction: 'none',
                         WebkitTouchCallout: 'none',
