@@ -1,0 +1,315 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowLeft, FileText, Users, Shield, Gavel, AlertCircle, Crown, Mail, Scale } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+const TermsOfService = () => {
+  const sections = [
+    {
+      icon: FileText,
+      title: 'Service Description and Scope',
+      content: [
+        {
+          subtitle: 'AI Jewelry Photography Services',
+          text: 'Jewelry AI provides artificial intelligence-powered jewelry photography and videography services. We transform your existing jewelry images into professional, on-model photography and cinematic videos using advanced AI technology.'
+        },
+        {
+          subtitle: 'Service Packages',
+          text: 'We offer various service packages including First Look ($99) and Collection ($399) packages, each with specific deliverables, timelines, and revision policies as outlined in your order confirmation.'
+        },
+        {
+          subtitle: 'Quality Standards',
+          text: 'Our AI technology maintains 95% accuracy in preserving jewelry details and characteristics. While we strive for perfection, we acknowledge that 100% accuracy is mathematically impossible in AI-generated content.'
+        },
+        {
+          subtitle: 'Delivery and Timelines',
+          text: 'Service delivery timelines are estimates based on current workload and complexity. While we strive to meet all deadlines, delivery times may vary due to technical requirements or revision requests.'
+        }
+      ]
+    },
+    {
+      icon: Users,
+      title: 'User Responsibilities and Conduct',
+      content: [
+        {
+          subtitle: 'Image Quality and Rights',
+          text: 'You must provide high-quality jewelry images that you own or have legal rights to use. Images should be clear, well-lit, and accurately represent the jewelry pieces you want us to process.'
+        },
+        {
+          subtitle: 'Accurate Information',
+          text: 'You agree to provide accurate information about your jewelry pieces, including materials, dimensions, and any special characteristics that may affect the AI processing results.'
+        },
+        {
+          subtitle: 'Prohibited Content',
+          text: 'You may not submit images containing copyrighted designs you don\'t own, inappropriate content, or jewelry pieces that violate any laws or regulations. We reserve the right to refuse service for any content we deem inappropriate.'
+        },
+        {
+          subtitle: 'Communication Standards',
+          text: 'All communication through our dedicated channels (Slack/WhatsApp) should be professional and respectful. We maintain the right to terminate service for abusive or inappropriate behavior.'
+        }
+      ]
+    },
+    {
+      icon: Crown,
+      title: 'Intellectual Property and Usage Rights',
+      content: [
+        {
+          subtitle: 'Your Content Ownership',
+          text: 'You retain full ownership of your original jewelry images and designs. We do not claim any ownership rights to your intellectual property or jewelry designs.'
+        },
+        {
+          subtitle: 'Generated Content Rights',
+          text: 'Upon full payment, you receive complete commercial usage rights to all AI-generated images and videos. You may use this content for marketing, advertising, e-commerce, and any other business purposes without restrictions.'
+        },
+        {
+          subtitle: 'Our Technology Rights',
+          text: 'Jewelry AI retains all rights to our proprietary AI technology, algorithms, and processing methods. You may not attempt to reverse-engineer, copy, or replicate our technology.'
+        },
+        {
+          subtitle: 'Portfolio Usage',
+          text: 'With your permission, we may use anonymized examples of our work in our portfolio and marketing materials. We will never use your content without explicit consent and will not identify your brand without permission.'
+        }
+      ]
+    },
+    {
+      icon: Shield,
+      title: 'Privacy and Data Protection',
+      content: [
+        {
+          subtitle: 'Data Security',
+          text: 'We implement industry-standard security measures to protect your jewelry images and personal information. All data transmission is encrypted, and access is restricted to authorized personnel only.'
+        },
+        {
+          subtitle: 'Image Storage and Retention',
+          text: 'Your jewelry images are stored securely during the project duration and for 90 days after completion for revision purposes. After this period, images are permanently deleted unless you request extended storage.'
+        },
+        {
+          subtitle: 'Privacy Policy Integration',
+          text: 'Our data handling practices are detailed in our Privacy Policy, which forms an integral part of these Terms of Service. By using our services, you agree to both documents.'
+        },
+        {
+          subtitle: 'Third-Party Services',
+          text: 'We may use trusted third-party services for payment processing, communication, and file storage. These providers are contractually bound to protect your information according to our privacy standards.'
+        }
+      ]
+    },
+    {
+      icon: Gavel,
+      title: 'Limitation of Liability and Disclaimers',
+      content: [
+        {
+          subtitle: 'Service Availability',
+          text: 'While we strive for 100% uptime, we cannot guarantee uninterrupted service availability. We are not liable for temporary service interruptions due to maintenance, technical issues, or circumstances beyond our control.'
+        },
+        {
+          subtitle: 'AI Technology Limitations',
+          text: 'AI-generated content may occasionally contain minor imperfections or variations from the original jewelry. While we maintain 95% accuracy standards, we cannot guarantee perfect replication in every instance.'
+        },
+        {
+          subtitle: 'Liability Limitations',
+          text: 'Our total liability for any claims related to our services is limited to the amount you paid for the specific service package. We are not liable for indirect, consequential, or punitive damages.'
+        },
+        {
+          subtitle: 'Force Majeure',
+          text: 'We are not responsible for delays or failures in service delivery due to natural disasters, pandemics, government actions, or other events beyond our reasonable control.'
+        }
+      ]
+    },
+    {
+      icon: AlertCircle,
+      title: 'Payment Terms and Billing',
+      content: [
+        {
+          subtitle: 'Payment Processing',
+          text: 'All payments are processed securely through industry-standard payment processors. Payment is required before work begins on your project, except for approved enterprise accounts with custom payment terms.'
+        },
+        {
+          subtitle: 'Pricing and Fees',
+          text: 'All prices are listed in USD and are subject to applicable taxes based on your billing location. Prices may change with notice, but existing orders are honored at the original quoted price.'
+        },
+        {
+          subtitle: 'Refund Policy Integration',
+          text: 'Refunds and cancellations are governed by our separate Cancellation & Refunds policy, which forms part of these Terms of Service.'
+        },
+        {
+          subtitle: 'Late Payments',
+          text: 'For enterprise accounts with payment terms, late payments may result in service suspension and additional fees. We reserve the right to require immediate payment for continued service.'
+        }
+      ]
+    },
+    {
+      icon: Scale,
+      title: 'Dispute Resolution and Legal Terms',
+      content: [
+        {
+          subtitle: 'Governing Law',
+          text: 'These Terms of Service are governed by the laws of [Jurisdiction], without regard to conflict of law principles. Any legal disputes will be resolved in the courts of [Jurisdiction].'
+        },
+        {
+          subtitle: 'Dispute Resolution Process',
+          text: 'Before pursuing legal action, we encourage resolving disputes through direct communication with our customer success team. Most issues can be resolved quickly through our standard support channels.'
+        },
+        {
+          subtitle: 'Arbitration Agreement',
+          text: 'For disputes that cannot be resolved through direct communication, both parties agree to binding arbitration rather than court proceedings, except for intellectual property disputes or injunctive relief.'
+        },
+        {
+          subtitle: 'Severability',
+          text: 'If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect. The unenforceable provision will be modified to the minimum extent necessary to make it enforceable.'
+        }
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      <SEOHead 
+        title="Terms of Service - Jewelry AI | Service Agreement & Legal Terms"
+        description="Read our Terms of Service for Jewelry AI photography services. Understand your rights, responsibilities, and our service commitments."
+        keywords="terms of service, jewelry AI terms, service agreement, legal terms, user agreement"
+        canonicalUrl="https://jewelryai.app/tos"
+      />
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="relative pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-50/30 to-yellow-50/30"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-amber-200/20 to-yellow-300/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-yellow-200/20 to-amber-300/20 rounded-full blur-3xl"></div>
+
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back Button */}
+          <Link 
+            to="/"
+            className="inline-flex items-center space-x-2 text-gray-600 hover:text-gray-900 mb-8 group transition-colors duration-200"
+          >
+            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
+            <span>Back to Home</span>
+          </Link>
+
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-2xl flex items-center justify-center">
+                <Scale className="w-8 h-8 text-white" />
+              </div>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Terms of Service
+            </h1>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              These terms govern your use of Jewelry AI services. By using our platform, 
+              you agree to these terms and our commitment to providing exceptional AI jewelry photography.
+            </p>
+            <div className="mt-6 text-sm text-gray-500">
+              Last updated: January 2025
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Introduction */}
+          <div className="mb-16 p-8 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200/50">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Welcome to Jewelry AI</h2>
+            <p className="text-gray-700 leading-relaxed">
+              These Terms of Service ("Terms") govern your access to and use of Jewelry AI's artificial intelligence-powered 
+              jewelry photography services. By accessing our website, placing an order, or using our services, you agree to 
+              be bound by these Terms. Please read them carefully before using our services. If you don't agree with any 
+              part of these terms, please don't use our services.
+            </p>
+          </div>
+
+          {/* Terms Sections */}
+          <div className="space-y-12">
+            {sections.map((section, index) => (
+              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200/50 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+                <div className="p-8">
+                  {/* Section Header */}
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-xl flex items-center justify-center">
+                      <section.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h2 className="text-2xl font-bold text-gray-900">{section.title}</h2>
+                  </div>
+
+                  {/* Section Content */}
+                  <div className="space-y-6">
+                    {section.content.map((item, itemIndex) => (
+                      <div key={itemIndex} className="border-l-4 border-amber-200 pl-6">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.subtitle}</h3>
+                        <p className="text-gray-700 leading-relaxed">{item.text}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Terms Updates */}
+          <div className="mt-16 p-8 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border border-purple-200/50">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Changes to Terms</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              We may update these Terms of Service from time to time to reflect changes in our services, 
+              legal requirements, or business practices. When we make significant changes, we'll notify you 
+              by email or through a prominent notice on our website at least 30 days before the changes take effect.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Your continued use of our services after the effective date of any changes constitutes your 
+              acceptance of the updated Terms. If you don't agree with the changes, you may terminate your 
+              account and stop using our services.
+            </p>
+          </div>
+
+          {/* Acceptance */}
+          <div className="mt-16 p-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200/50">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Agreement and Acceptance</h2>
+            <p className="text-gray-700 leading-relaxed">
+              By using Jewelry AI services, you acknowledge that you have read, understood, and agree to be bound by these 
+              Terms of Service, our Privacy Policy, and our Cancellation & Refunds policy. These documents together form 
+              the complete agreement between you and Jewelry AI regarding your use of our services.
+            </p>
+          </div>
+
+          {/* Contact Section */}
+          <div className="mt-16 text-center">
+            <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 border border-gray-200/50">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Questions About These Terms?</h3>
+              <p className="text-gray-600 mb-6">
+                Our legal and customer success teams are available to clarify any aspects of our Terms of Service 
+                and help you understand your rights and responsibilities.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="mailto:legal@jewelryai.app"
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-amber-500 to-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-amber-600 hover:to-yellow-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  <Mail className="w-5 h-5" />
+                  <span>Contact Legal Team</span>
+                </a>
+                <Link 
+                  to="/"
+                  className="inline-flex items-center space-x-2 bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 hover:shadow-lg transition-all duration-200"
+                >
+                  <ArrowLeft className="w-5 h-5" />
+                  <span>Back to Home</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default TermsOfService;
