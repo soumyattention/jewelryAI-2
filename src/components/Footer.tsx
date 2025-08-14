@@ -82,11 +82,11 @@ const Footer = () => {
               </Link>
               
               <Link 
-                to="/portfolio"
+                                        to="/gallery"
                 className="group flex items-center space-x-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 touch-manipulation py-1"
               >
                 <div className="w-2 h-2 bg-amber-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-                <span className="text-sm sm:text-base">Portfolio</span>
+                                    <span className="text-sm sm:text-base">Gallery</span>
                 <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
               </Link>
               

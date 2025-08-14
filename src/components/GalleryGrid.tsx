@@ -7,6 +7,7 @@ const GalleryGrid = () => {
     const [selectedCategory, setSelectedCategory] = useState("all");
     const [selectedMedia, setSelectedMedia] = useState<{ type: 'image' | 'video', url: string } | null>(null);
     const [shuffledItems, setShuffledItems] = useState<any[]>([]);
+    const [videoErrors, setVideoErrors] = useState<string[]>([]);
 
     // Gallery items with photos and videos (4:5 aspect ratio optimized)
     const galleryItems = [
@@ -903,7 +904,14 @@ const GalleryGrid = () => {
 
     // Shuffle items on component mount and when page refreshes
     useEffect(() => {
-        setShuffledItems(shuffleArray(galleryItems));
+        const shuffled = shuffleArray(galleryItems);
+        setShuffledItems(shuffled);
+        
+        // Debug: Log the number of videos and photos
+        const videoCount = shuffled.filter(item => item.type === 'video').length;
+        const photoCount = shuffled.filter(item => item.type === 'image').length;
+        console.log(`GalleryGrid: ${videoCount} videos, ${photoCount} photos loaded`);
+        console.log('Video IDs:', shuffled.filter(item => item.type === 'video').map(item => item.id));
     }, []);
 
     const openMediaPreview = (item: any) => {
@@ -990,7 +998,12 @@ const GalleryGrid = () => {
                     showClass="flex" 
                     hideClass="hidden"
                 >
-                    {filteredItems.map((item) => (
+                    {filteredItems.map((item) => {
+                        // Debug: Log each item being rendered
+                        if (item.type === 'video') {
+                            console.log('Rendering video:', item.id, item.src);
+                        }
+                        return (
                         <FlipRevealItem key={item.id} flipKey={item.category}>
                             <div 
                                 className="group relative overflow-hidden rounded-xl sm:rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer touch-manipulation"
@@ -1008,12 +1021,28 @@ const GalleryGrid = () => {
                                             preload="metadata"
                                             autoPlay
                                             loop
+                                            onLoadStart={() => {
+                                                console.log('Video loading started:', item.src);
+                                            }}
                                             onLoadedMetadata={(e) => {
                                                 const video = e.target as HTMLVideoElement;
                                                 video.currentTime = 0.1; // Set to a small time to generate thumbnail
+                                                console.log('Video loaded successfully:', item.src);
+                                            }}
+                                            onCanPlay={() => {
+                                                console.log('Video can play:', item.src);
                                             }}
                                             onError={(e) => {
-                                                console.log('Video load error:', e);
+                                                console.log('Video load error for:', item.src);
+                                                setVideoErrors(prev => [...prev, item.src]);
+                                                // Show a fallback image or placeholder when video fails to load
+                                                const videoElement = e.target as HTMLVideoElement;
+                                                videoElement.style.display = 'none';
+                                                // Create a fallback div
+                                                const fallback = document.createElement('div');
+                                                fallback.className = 'w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center';
+                                                fallback.innerHTML = '<div class="text-gray-500 text-sm">Video unavailable</div>';
+                                                videoElement.parentElement?.appendChild(fallback);
                                             }}
                                         />
                                     ) : (
@@ -1045,7 +1074,8 @@ const GalleryGrid = () => {
                                 </div>
                             </div>
                         </FlipRevealItem>
-                    ))}
+                        );
+                    })}
                 </FlipReveal>
 
                 {/* Stats */}
@@ -1059,7 +1089,7 @@ const GalleryGrid = () => {
                         </div>
                         <div>
                             <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">
-                                {shuffledItems.filter(item => item.type === 'video').length}+
+                                {shuffledItems.filter(item => item.type === 'video').length}
                             </div>
                             <div className="text-sm sm:text-base text-gray-600">Curated Videos</div>
                         </div>
@@ -1068,6 +1098,28 @@ const GalleryGrid = () => {
                             <div className="text-sm sm:text-base text-gray-600">Quality</div>
                         </div>
                     </div>
+                    
+                    {/* Debug Info - Only show in development */}
+                    {process.env.NODE_ENV === 'development' && (
+                        <div className="mt-8 p-4 bg-gray-100 rounded-lg">
+                            <h3 className="text-lg font-semibold mb-2">Debug Info</h3>
+                            <p>Total Items: {shuffledItems.length}</p>
+                            <p>Photos: {shuffledItems.filter(item => item.type === 'image').length}</p>
+                            <p>Videos: {shuffledItems.filter(item => item.type === 'video').length}</p>
+                            <p>Video Errors: {videoErrors.length}</p>
+                            {videoErrors.length > 0 && (
+                                <div className="mt-2 text-left">
+                                    <p className="font-semibold">Failed Videos:</p>
+                                    <ul className="text-sm text-red-600">
+                                        {videoErrors.slice(0, 5).map((error, index) => (
+                                            <li key={index} className="truncate">{error}</li>
+                                        ))}
+                                        {videoErrors.length > 5 && <li>... and {videoErrors.length - 5} more</li>}
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </div>
             </div>
 
@@ -1075,12 +1127,6 @@ const GalleryGrid = () => {
             {selectedMedia && (
                 <div 
                     className="fixed inset-0 z-[9999] flex items-center justify-center transition-opacity duration-300"
-                    style={{
-                        background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(30, 30, 30, 0.6) 50%, rgba(0, 0, 0, 0.4) 100%)',
-                        backdropFilter: 'blur(20px)',
-                        WebkitBackdropFilter: 'blur(20px)'
-                    }}
-                    onClick={closeMediaPreview}
                     style={{ 
                         touchAction: 'none',
                         WebkitTouchCallout: 'none',
@@ -1090,6 +1136,7 @@ const GalleryGrid = () => {
                         backdropFilter: 'blur(24px) saturate(180%)',
                         WebkitBackdropFilter: 'blur(24px) saturate(180%)'
                     }}
+                    onClick={closeMediaPreview}
                 >
                     {/* Additional glassmorphic overlay elements */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 pointer-events-none"></div>
@@ -1104,17 +1151,15 @@ const GalleryGrid = () => {
                                 background: 'rgba(255, 255, 255, 0.15)',
                                 backdropFilter: 'blur(16px)',
                                 WebkitBackdropFilter: 'blur(16px)',
-                                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
-                            }}
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                closeMediaPreview();
-                            }}
-                            style={{
+                                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
                                 width: '48px',
                                 height: '48px',
                                 minWidth: '48px',
                                 minHeight: '48px'
+                            }}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                closeMediaPreview();
                             }}
                             aria-label="Close preview"
                         >

@@ -234,8 +234,6 @@ const PortfolioGallery = () => {
     id: 106,
     category: "videos",
     type: "video",
-    category: "videos",
-    type: "video",
     src: "https://ik.imagekit.io/soumya3301/My%20Video-28.mp4?updatedAt=1750708653814",
     alt: "AI-generated jewelry video"
 },
@@ -447,12 +445,6 @@ const PortfolioGallery = () => {
                 <div 
                     className="fixed inset-0 z-[9999] flex items-center justify-center transition-opacity duration-300"
                     style={{
-                        background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(30, 30, 30, 0.6) 50%, rgba(0, 0, 0, 0.4) 100%)',
-                        backdropFilter: 'blur(20px)',
-                        WebkitBackdropFilter: 'blur(20px)'
-                    }}
-                    onClick={closeMediaPreview}
-                    style={{ 
                         touchAction: 'none',
                         WebkitTouchCallout: 'none',
                         WebkitUserSelect: 'none',
@@ -461,6 +453,7 @@ const PortfolioGallery = () => {
                         backdropFilter: 'blur(24px) saturate(180%)',
                         WebkitBackdropFilter: 'blur(24px) saturate(180%)'
                     }}
+                    onClick={closeMediaPreview}
                 >
                     {/* Additional glassmorphic overlay elements */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 pointer-events-none"></div>
@@ -475,17 +468,15 @@ const PortfolioGallery = () => {
                                 background: 'rgba(255, 255, 255, 0.15)',
                                 backdropFilter: 'blur(16px)',
                                 WebkitBackdropFilter: 'blur(16px)',
-                                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
-                            }}
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                closeMediaPreview();
-                            }}
-                            style={{
+                                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
                                 width: '48px',
                                 height: '48px',
                                 minWidth: '48px',
                                 minHeight: '48px'
+                            }}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                closeMediaPreview();
                             }}
                             aria-label="Close preview"
                         >

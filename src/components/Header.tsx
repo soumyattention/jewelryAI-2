@@ -45,7 +45,7 @@ const Header = () => {
   const navItems = [
     { name: 'Features', href: '#features' },
     { name: 'How It Works', href: '#how-it-works' },
-    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Gallery', href: '/gallery' },
     { name: 'Pricing', href: '#pricing' },
   ];
 
