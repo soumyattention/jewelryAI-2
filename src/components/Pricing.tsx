@@ -24,7 +24,7 @@ const Pricing = () => {
       features: [
         'Up to 20 Jewelry Articles',
         'Up to 50 AI Photoshoot',
-        '10 AI Cinematic Videos',
+        'AI Cinematic Videos on all Jewelry Articles',
         '14 Days Delivery',
         'Unlimited Revision',
         'Dedicated Slack/WhatsApp Channel'

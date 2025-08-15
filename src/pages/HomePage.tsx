@@ -10,6 +10,7 @@ import Pricing from '../components/Pricing';
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import Team from '../components/Team';
+import USPs from '../components/USPs';
 import FinalCTA from '../components/FinalCTA';
 import Footer from '../components/Footer';
 
@@ -32,6 +33,7 @@ const HomePage = () => {
       <Testimonials />
       <FAQ />
       <Team />
+      <USPs />
       <FinalCTA />
       <Footer />
     </>
