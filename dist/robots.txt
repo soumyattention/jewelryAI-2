@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin or private areas (if any in future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow crawling of all public content
+Allow: /gallery
+Allow: /furniture
+Allow: /privacy
+Allow: /refunds
+Allow: /tos
+
+# Sitemap location
+Sitemap: https://jewelryai.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
