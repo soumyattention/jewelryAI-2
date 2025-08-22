@@ -4,6 +4,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import App from './App.tsx';
 import './index.css';
+import { initializeDatabase } from './services/database';
+
+// Initialize database on app start
+initializeDatabase().catch(console.error);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

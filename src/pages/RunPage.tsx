@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import SEOHead from '../components/SEOHead';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -8,11 +8,19 @@ import FloatingDock from '../components/FloatingDock';
 const RunPage = () => {
   const [selectedCount, setSelectedCount] = useState(0);
   const [progressPercentage, setProgressPercentage] = useState(0);
+  const [selectedImages, setSelectedImages] = useState<number[]>([]);
   const MAX_SELECTION = 25;
 
-  const handleSelectionChange = (count: number, percentage: number) => {
+  const handleSelectionChange = useCallback((count: number, percentage: number, images: number[]) => {
     setSelectedCount(count);
     setProgressPercentage(percentage);
+    setSelectedImages(images);
+  }, []);
+
+  const handleSubmitSuccess = () => {
+    setSelectedCount(0);
+    setProgressPercentage(0);
+    setSelectedImages([]);
   };
 
   return (
@@ -36,7 +44,7 @@ const RunPage = () => {
           </p>
         </div>
         
-        <RunGrid onSelectionChange={handleSelectionChange} />
+        <RunGrid onSelectionChange={handleSelectionChange} onSubmitSuccess={handleSubmitSuccess} />
       </main>
       
       <Footer />
@@ -46,6 +54,8 @@ const RunPage = () => {
         selectedCount={selectedCount}
         maxSelection={MAX_SELECTION}
         progressPercentage={progressPercentage}
+        selectedImages={selectedImages}
+        onSuccess={handleSubmitSuccess}
       />
     </div>
   );
