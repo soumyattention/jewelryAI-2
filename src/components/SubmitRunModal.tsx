@@ -27,8 +27,8 @@ const SubmitRunModal: React.FC<SubmitRunModalProps> = ({
       return;
     }
 
-    if (selectedImages.length !== 25) {
-      setError('Please select exactly 25 images');
+    if (selectedImages.length < 10 || selectedImages.length > 25) {
+      setError('Please select between 10 and 25 images');
       return;
     }
 
@@ -80,7 +80,7 @@ const SubmitRunModal: React.FC<SubmitRunModalProps> = ({
             </div>
             <div>
               <h2 className="text-xl font-bold text-gray-900">Submit Your Selection</h2>
-              <p className="text-sm text-gray-500">25 images selected</p>
+              <p className="text-sm text-gray-500">{selectedImages.length} images selected</p>
             </div>
           </div>
           <button

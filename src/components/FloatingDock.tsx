@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, User, Send, Loader2, CheckCircle, Sparkles } from 'lucide-react';
+import { X, User, Send, Loader2, CheckCircle, Sparkles, Check } from 'lucide-react';
 import { createRunRecord } from '../services/database';
 import confetti from 'canvas-confetti';
 
@@ -24,11 +24,9 @@ const FloatingDock: React.FC<FloatingDockProps> = ({
   const [error, setError] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
 
-  // Auto-expand when 25 images are selected
+  // Auto-expand when minimum images are selected (can be triggered manually)
   React.useEffect(() => {
-    if (selectedCount === maxSelection) {
-      setIsExpanded(true);
-    }
+    // Remove auto-expand, let user decide when to submit
   }, [selectedCount, maxSelection]);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -39,8 +37,8 @@ const FloatingDock: React.FC<FloatingDockProps> = ({
       return;
     }
 
-    if (selectedImages.length !== 25) {
-      setError('Please select exactly 25 images');
+    if (selectedImages.length < 10 || selectedImages.length > 25) {
+      setError('Please select between 10 and 25 images');
       return;
     }
 
@@ -233,7 +231,8 @@ const FloatingDock: React.FC<FloatingDockProps> = ({
   // Regular floating dock when not expanded
   return (
     <div className="fixed bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 z-[9999] pointer-events-none px-4 sm:px-0">
-      <div className="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-2xl border border-gray-200/50 px-3 sm:px-6 py-2 sm:py-4 min-w-[240px] sm:min-w-[300px] max-w-[85vw] sm:max-w-[90vw] mx-auto pointer-events-auto">
+      <div className="flex items-center space-x-3 pointer-events-auto">
+        <div className="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-2xl border border-gray-200/50 px-3 sm:px-6 py-2 sm:py-4 min-w-[240px] sm:min-w-[300px] max-w-[85vw] sm:max-w-[90vw]">
         <div className="relative">
           <div className="flex items-center justify-between mb-1 sm:mb-3">
             <span className="text-xs sm:text-sm font-semibold text-gray-800">
@@ -255,16 +254,24 @@ const FloatingDock: React.FC<FloatingDockProps> = ({
             ></div>
           </div>
           
+
+          
           {/* Status Messages - Hidden on mobile */}
           {selectedCount === 0 && (
             <div className="mt-2 text-xs text-gray-500 text-center hidden sm:block">
-              Select up to 25 images to continue
+              Select 10-25 images to continue
             </div>
           )}
           
-          {selectedCount > 0 && selectedCount < maxSelection && (
+          {selectedCount > 0 && selectedCount < 10 && (
+            <div className="mt-2 text-xs text-amber-600 text-center font-medium hidden sm:block">
+              {10 - selectedCount} more images needed (minimum 10)
+            </div>
+          )}
+          
+          {selectedCount >= 10 && selectedCount < maxSelection && (
             <div className="mt-2 text-xs text-green-600 text-center font-medium hidden sm:block">
-              {maxSelection - selectedCount} more images can be selected
+              Ready to submit! {maxSelection - selectedCount} more can be selected
             </div>
           )}
           
@@ -273,7 +280,23 @@ const FloatingDock: React.FC<FloatingDockProps> = ({
               ✓ Maximum selection reached
             </div>
           )}
+          </div>
         </div>
+        
+        {/* External Submit Button */}
+        <button
+          onClick={selectedCount >= 10 ? () => setIsExpanded(true) : undefined}
+          disabled={selectedCount < 10}
+          className={`h-[52px] sm:h-[64px] w-[52px] sm:w-[64px] rounded-xl sm:rounded-2xl flex items-center justify-center transition-all duration-200 shadow-2xl border ${
+            selectedCount >= 10
+              ? 'bg-green-500 hover:bg-green-600 border-green-400/50 cursor-pointer hover:shadow-xl'
+              : 'bg-white/95 border-gray-200/50 cursor-not-allowed opacity-60'
+          }`}
+        >
+          <Check className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors duration-200 ${
+            selectedCount >= 10 ? 'text-white' : 'text-gray-400'
+          }`} />
+        </button>
       </div>
     </div>
   );
