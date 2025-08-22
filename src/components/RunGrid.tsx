@@ -734,51 +734,7 @@ const RunGrid: React.FC<RunGridProps> = ({ onSelectionChange, onSubmitSuccess })
                 </div>
             </div>
 
-            {/* Sticky Floating Progress Bar - Fixed to Viewport Bottom */}
-            <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-[9999] pointer-events-none">
-                <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 px-6 py-4 min-w-[300px] max-w-[90vw] mx-auto pointer-events-auto">
-                    <div className="relative">
-                        <div className="flex items-center justify-between mb-3">
-                            <span className="text-sm font-semibold text-gray-800">
-                                {selectedImages.size}/{MAX_SELECTION} images selected
-                            </span>
-                            <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
-                                {Math.round(progressPercentage)}%
-                            </span>
-                        </div>
-                        
-                        {/* Progress Bar */}
-                        <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden shadow-inner">
-                            <div 
-                                className="h-full bg-gradient-to-r from-green-400 via-green-500 to-green-600 rounded-full transition-all duration-700 ease-out shadow-sm"
-                                style={{ 
-                                    width: `${progressPercentage}%`,
-                                    boxShadow: progressPercentage > 0 ? '0 0 10px rgba(34, 197, 94, 0.3)' : 'none'
-                                }}
-                            ></div>
-                        </div>
-                        
-                        {/* Status Messages */}
-                        {selectedImages.size === 0 && (
-                            <div className="mt-2 text-xs text-gray-500 text-center">
-                                Select up to 25 images to continue
-                            </div>
-                        )}
-                        
-                        {selectedImages.size > 0 && selectedImages.size < MAX_SELECTION && (
-                            <div className="mt-2 text-xs text-green-600 text-center font-medium">
-                                {MAX_SELECTION - selectedImages.size} more images can be selected
-                            </div>
-                        )}
-                        
-                        {selectedImages.size >= MAX_SELECTION && (
-                            <div className="mt-2 text-xs text-amber-600 text-center font-medium">
-                                ✓ Maximum selection reached
-                            </div>
-                        )}
-                    </div>
-                </div>
-            </div>
+
 
             {/* Success Message */}
             {showSuccessMessage && (

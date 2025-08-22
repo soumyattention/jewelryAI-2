@@ -37,10 +37,10 @@ const RunPage = () => {
         {/* Page Header */}
         <div className="text-center py-12 sm:py-16 px-4">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-            Jewelry <span className="text-amber-500">Collection</span>
+            Jewelry <span className="text-amber-500">Run</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Browse through our extensive collection of AI-generated jewelry photography
+            Choose 25 jewelry model images out of these 100 that suits your brand, then hit submit.
           </p>
         </div>
         
