@@ -943,7 +943,7 @@ const GalleryGrid = () => {
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/b4d8f869-9cea-482e-a21d-167dee6163b9/play_720p.mp4",
     alt: "AI-generated jewelry video",
-    autoplay: false
+    autoplay: true
 },
 {
     id: 1005,
@@ -951,7 +951,7 @@ const GalleryGrid = () => {
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/2b5866a6-c787-4182-bda6-aacee02876c0/play_720p.mp4",
     alt: "AI-generated jewelry video",
-    autoplay: false
+    autoplay: true
 },
 {
     id: 1006,
@@ -959,7 +959,7 @@ const GalleryGrid = () => {
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/ecfa534d-2ff7-4c68-b761-3ca88f1be940/play_720p.mp4",
     alt: "AI-generated jewelry video",
-    autoplay: true
+    autoplay: false
 },
 {
     id: 1007,
@@ -983,7 +983,7 @@ const GalleryGrid = () => {
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/f65e994c-7c93-4da2-b57f-ecc17aac13a2/play_720p.mp4",
     alt: "AI-generated jewelry video",
-    autoplay: true
+    autoplay: false
 },
       {
     id: 1010,
@@ -991,7 +991,7 @@ const GalleryGrid = () => {
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/7c4495a8-61bc-4a0b-9196-e890d5da7c58/play_720p.mp4",
     alt: "AI-generated jewelry video",
-    autoplay: false
+    autoplay: true
 },
 {
     id: 1011,
@@ -1007,7 +1007,7 @@ const GalleryGrid = () => {
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/f665cc66-e913-4c7a-9929-b9636b516b9d/play_720p.mp4",
     alt: "AI-generated jewelry video",
-    autoplay: true
+    autoplay: false
 },
 {
     id: 1013,
@@ -1039,7 +1039,7 @@ const GalleryGrid = () => {
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/cb0d47d8-f1fa-4290-9a92-c5522f2f2e75/play_720p.mp4",
     alt: "AI-generated jewelry video",
-    autoplay: false
+    autoplay: true
 },
 {
     id: 1017,
@@ -1055,105 +1055,119 @@ const GalleryGrid = () => {
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/07e88740-930e-4e95-98ea-1289f5815a16/play_720p.mp4",
     alt: "AI-generated jewelry video",
-    autoplay: true
+    autoplay: false
 },
 {
     id: 1019,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/f46f45ec-cd9c-4e39-99a6-e238732e3258/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
       {
     id: 1020,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/7b3ef907-0e56-46c5-842c-2ea93fd9788a/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: true
 },
       {
     id: 1021,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/b286f134-af73-4e4d-ac0c-6b788b569a0c/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
       {
     id: 1022,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/10871951-4fdd-4e54-995e-892e0951eae1/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
       {
     id: 1023,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/bbfa530f-610c-47d9-a811-998681f6b0c9/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
       {
     id: 1024,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/dd3d169a-5f00-42e2-b5e4-0bce94d93e47/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: true
 },
       {
     id: 1025,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/06c9ad7f-aa19-4b41-9b67-aca486fa4a24/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
       {
     id: 1026,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/ef71e156-1f92-457f-b9da-28aa4188a53c/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
       {
     id: 1027,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/d85501f2-6aad-4a58-bfce-df167bfb5196/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
       {
     id: 1028,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/6d1d564d-cef3-49cc-9920-1a86626b5afd/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
       {
     id: 1029,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/1a71f7a5-8e05-4135-8b52-0a36b16d250f/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
       {
     id: 1030,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/1aee35f9-f4f2-4d55-90fb-2f4b8ef47263/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: true
 },
       {
     id: 1031,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/d52d2f69-eaba-4778-86f1-0476a5a98878/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
       {
     id: 1032,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/ed2983fc-01e0-445c-86d9-fa7ad47ce70b/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 }
 
     ];
@@ -1194,30 +1208,30 @@ const GalleryGrid = () => {
         console.log('Video IDs:', shuffled.filter(item => item.type === 'video').map(item => item.id));
     }, []);
 
-    // Intersection Observer for mobile video loading
+    // Intersection Observer for viewport-based video autoplay (both mobile and desktop)
     useEffect(() => {
-        if (!isMobile) return;
-
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     const videoId = parseInt(entry.target.getAttribute('data-video-id') || '0');
                     const video = videoRefs.current[videoId];
+                    const videoItem = shuffledItems.find(item => item.id === videoId);
                     
-                    if (video && entry.isIntersecting) {
-                        // Load video when it comes into view on mobile
-                        video.load();
+                    if (video && videoItem && entry.isIntersecting) {
+                        // Load video when it comes into view
+                        if (isMobile) {
+                            video.load();
+                        }
+                        
                         // Only autoplay if the video has autoplay enabled
-                        const videoItem = shuffledItems.find(item => item.id === videoId);
-                        if (videoItem?.autoplay) {
+                        if (videoItem.autoplay) {
                             video.play().catch((error) => {
-                                console.log('Mobile video autoplay failed:', error);
+                                console.log('Video autoplay failed:', error);
                             });
                         }
-                    } else if (video && !entry.isIntersecting) {
+                    } else if (video && videoItem && !entry.isIntersecting) {
                         // Pause video when it goes out of view to save bandwidth
-                        const videoItem = shuffledItems.find(item => item.id === videoId);
-                        if (videoItem?.autoplay) {
+                        if (videoItem.autoplay) {
                             video.pause();
                         } else if (playingVideos.has(videoId)) {
                             // Pause manual control videos that are playing
@@ -1235,8 +1249,8 @@ const GalleryGrid = () => {
                 });
             },
             {
-                threshold: 0.5,
-                rootMargin: '50px'
+                threshold: 0.3, // Start playing when 30% of video is visible
+                rootMargin: '100px' // Start loading 100px before entering viewport
             }
         );
 
@@ -1247,7 +1261,7 @@ const GalleryGrid = () => {
         return () => {
             videoContainers.forEach((container) => observer.unobserve(container));
         };
-    }, [isMobile, shuffledItems]);
+    }, [isMobile, shuffledItems, playingVideos, currentlyPlaying]);
 
     // Handle video play/pause for manual controls
     const handleVideoClick = (videoId: number, item: any) => {
@@ -1378,7 +1392,7 @@ const GalleryGrid = () => {
                                             muted
                                             playsInline
                                             preload={isMobile ? "none" : "metadata"}
-                                            autoPlay={!isMobile && item.autoplay}
+                                            autoPlay={false}
                                             loop={item.autoplay}
                                             webkit-playsinline="true"
                                             x5-playsinline="true"
