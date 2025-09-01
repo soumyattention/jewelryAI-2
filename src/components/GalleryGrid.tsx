@@ -8,6 +8,8 @@ const GalleryGrid = () => {
     const [shuffledItems, setShuffledItems] = useState<any[]>([]);
     const [videoErrors, setVideoErrors] = useState<string[]>([]);
     const [isMobile, setIsMobile] = useState(false);
+    const [playingVideos, setPlayingVideos] = useState<Set<number>>(new Set());
+    const [currentlyPlaying, setCurrentlyPlaying] = useState<number | null>(null);
     const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
 
     // Gallery items with photos and videos (4:5 aspect ratio optimized)
@@ -916,126 +918,144 @@ const GalleryGrid = () => {
             category: "videos",
             type: "video",
             src: "https://vz-d4c6dff3-d8a.b-cdn.net/a1b21492-e4b8-4404-a886-280646f57292/play_720p.mp4",
-            alt: "AI-generated jewelry video"
+            alt: "AI-generated jewelry video",
+            autoplay: true
         },
        {
     id: 1002,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/b862e053-23bf-40b2-aaa3-d66febcd2bc5/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
 {
     id: 1003,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/609a05ad-cac3-42ec-8924-537860b68e3b/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: true
 },
 {
     id: 1004,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/b4d8f869-9cea-482e-a21d-167dee6163b9/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
 {
     id: 1005,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/2b5866a6-c787-4182-bda6-aacee02876c0/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
 {
     id: 1006,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/ecfa534d-2ff7-4c68-b761-3ca88f1be940/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: true
 },
 {
     id: 1007,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/79f01df2-be80-4531-9daf-9f0ce4455b01/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
 {
     id: 1008,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/afeae2fd-570b-4dd2-95bb-276da388500a/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
 {
     id: 1009,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/f65e994c-7c93-4da2-b57f-ecc17aac13a2/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: true
 },
       {
     id: 1010,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/7c4495a8-61bc-4a0b-9196-e890d5da7c58/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
 {
     id: 1011,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/fa3a7119-6768-4757-9505-716373861794/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
 {
     id: 1012,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/f665cc66-e913-4c7a-9929-b9636b516b9d/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: true
 },
 {
     id: 1013,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/e7fd9b51-f98f-4cb7-b6c8-e6fbd12ba927/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
 {
     id: 1014,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/03afbc57-7d75-4fd6-b2a3-4404a3b22fd1/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
 {
     id: 1015,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/bd3fe346-4cc0-4e7c-921a-6f33b9005461/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: true
 },
 {
     id: 1016,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/cb0d47d8-f1fa-4290-9a92-c5522f2f2e75/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
 {
     id: 1017,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/c888c333-9e4b-488f-bef4-be5eaf89aafb/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: false
 },
 {
     id: 1018,
     category: "videos",
     type: "video",
     src: "https://vz-d4c6dff3-d8a.b-cdn.net/07e88740-930e-4e95-98ea-1289f5815a16/play_720p.mp4",
-    alt: "AI-generated jewelry video"
+    alt: "AI-generated jewelry video",
+    autoplay: true
 },
 {
     id: 1019,
@@ -1185,14 +1205,32 @@ const GalleryGrid = () => {
                     const video = videoRefs.current[videoId];
                     
                     if (video && entry.isIntersecting) {
-                        // Load and play video when it comes into view on mobile
+                        // Load video when it comes into view on mobile
                         video.load();
-                        video.play().catch((error) => {
-                            console.log('Mobile video autoplay failed:', error);
-                        });
+                        // Only autoplay if the video has autoplay enabled
+                        const videoItem = shuffledItems.find(item => item.id === videoId);
+                        if (videoItem?.autoplay) {
+                            video.play().catch((error) => {
+                                console.log('Mobile video autoplay failed:', error);
+                            });
+                        }
                     } else if (video && !entry.isIntersecting) {
                         // Pause video when it goes out of view to save bandwidth
-                        video.pause();
+                        const videoItem = shuffledItems.find(item => item.id === videoId);
+                        if (videoItem?.autoplay) {
+                            video.pause();
+                        } else if (playingVideos.has(videoId)) {
+                            // Pause manual control videos that are playing
+                            video.pause();
+                            setPlayingVideos(prev => {
+                                const newSet = new Set(prev);
+                                newSet.delete(videoId);
+                                return newSet;
+                            });
+                            if (currentlyPlaying === videoId) {
+                                setCurrentlyPlaying(null);
+                            }
+                        }
                     }
                 });
             },
@@ -1211,7 +1249,56 @@ const GalleryGrid = () => {
         };
     }, [isMobile, shuffledItems]);
 
+    // Handle video play/pause for manual controls
+    const handleVideoClick = (videoId: number, item: any) => {
+        if (item.autoplay) return; // Don't handle clicks for autoplay videos
+        
+        const video = videoRefs.current[videoId];
+        if (!video) return;
 
+        if (playingVideos.has(videoId)) {
+            // Pause the video
+            video.pause();
+            setPlayingVideos(prev => {
+                const newSet = new Set(prev);
+                newSet.delete(videoId);
+                return newSet;
+            });
+            if (currentlyPlaying === videoId) {
+                setCurrentlyPlaying(null);
+            }
+        } else {
+            // Stop any other non-autoplay video that's currently playing
+            if (currentlyPlaying && !shuffledItems.find(i => i.id === currentlyPlaying)?.autoplay) {
+                const currentVideo = videoRefs.current[currentlyPlaying];
+                if (currentVideo) {
+                    currentVideo.pause();
+                    setPlayingVideos(prev => {
+                        const newSet = new Set(prev);
+                        newSet.delete(currentlyPlaying);
+                        return newSet;
+                    });
+                }
+            }
+            
+            // Play the new video
+            video.play().catch(console.error);
+            setPlayingVideos(prev => new Set(prev).add(videoId));
+            setCurrentlyPlaying(videoId);
+        }
+    };
+
+    // Handle video ended event
+    const handleVideoEnded = (videoId: number) => {
+        setPlayingVideos(prev => {
+            const newSet = new Set(prev);
+            newSet.delete(videoId);
+            return newSet;
+        });
+        if (currentlyPlaying === videoId) {
+            setCurrentlyPlaying(null);
+        }
+    };
 
     // Filter items based on selected category
     const filteredItems = selectedCategory === "all" 
@@ -1273,6 +1360,10 @@ const GalleryGrid = () => {
                             <div 
                                 className="group relative overflow-hidden rounded-xl sm:rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                                 {...(item.type === 'video' ? { 'data-video-id': item.id } : {})}
+                                {...(item.type === 'video' && !item.autoplay ? { 
+                                    onClick: () => handleVideoClick(item.id, item),
+                                    style: { cursor: 'pointer' }
+                                } : {})}
                             >
                                 {/* 4:5 Aspect Ratio Container */}
                                 <div className="aspect-[4/5] overflow-hidden relative">
@@ -1287,8 +1378,8 @@ const GalleryGrid = () => {
                                             muted
                                             playsInline
                                             preload={isMobile ? "none" : "metadata"}
-                                            autoPlay={!isMobile}
-                                            loop
+                                            autoPlay={!isMobile && item.autoplay}
+                                            loop={item.autoplay}
                                             webkit-playsinline="true"
                                             x5-playsinline="true"
                                             x5-video-player-type="h5"
@@ -1322,6 +1413,11 @@ const GalleryGrid = () => {
                                                 fallback.innerHTML = '<div class="text-gray-500 text-sm">Video unavailable</div>';
                                                 videoElement.parentElement?.appendChild(fallback);
                                             }}
+                                            onEnded={() => {
+                                                if (!item.autoplay) {
+                                                    handleVideoEnded(item.id);
+                                                }
+                                            }}
                                         />
                                     ) : (
                                         <img
@@ -1332,12 +1428,27 @@ const GalleryGrid = () => {
                                         />
                                     )}
                                     
-                                    {/* Video play button - always visible for videos, prominent and glassmorphic */}
+                                    {/* Video play button - different behavior for autoplay vs manual control */}
                                     {item.type === 'video' && (
-                                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/15 backdrop-blur-md border border-white/25 rounded-full flex items-center justify-center shadow-lg ring-2 ring-white/10">
-                                                <Play className="w-4 h-4 sm:w-5 sm:h-5 text-white/80 ml-0.5" fill="currentColor" />
-                                            </div>
+                                        <div className={`absolute inset-0 flex items-center justify-center ${
+                                            item.autoplay ? 'pointer-events-none' : 'pointer-events-auto cursor-pointer'
+                                        }`}>
+                                            {!item.autoplay && (
+                                                <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center shadow-lg ring-2 ring-white/20 transition-all duration-300 ${
+                                                    playingVideos.has(item.id) ? 'bg-white/30 scale-110' : 'hover:bg-white/25 hover:scale-105'
+                                                }`}>
+                                                    {playingVideos.has(item.id) ? (
+                                                        <div className="w-3 h-3 sm:w-4 sm:h-4 bg-white/90 rounded-sm" />
+                                                    ) : (
+                                                        <Play className="w-5 h-5 sm:w-6 sm:h-6 text-white/90 ml-0.5" fill="currentColor" />
+                                                    )}
+                                                </div>
+                                            )}
+                                            {item.autoplay && (
+                                                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center shadow-md">
+                                                    <div className="w-2 h-2 bg-white/60 rounded-full animate-pulse" />
+                                                </div>
+                                            )}
                                         </div>
                                     )}
 
