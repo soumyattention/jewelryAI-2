@@ -19,15 +19,15 @@ const Pricing = () => {
     },
     {
       name: 'The Collection',
-      price: '$399',
-      description: 'Best value for money for jewelry stores',
+      price: '$599',
+      description: 'One month of highest-quality contents',
       features: [
-        'Up to 20 Jewelry Articles',
-        'Up to 50 AI Photoshoot',
-        'AI Cinematic Videos on all Jewelry Articles',
-        '14 Days Delivery',
-        'Unlimited Revision',
-        'Dedicated Slack/WhatsApp Channel'
+        'Up to 60 AI Photoshoot',
+        'Up to 20 AI Cinematic Videos (30s 1080p each)',
+        'Most Natural AI Models (indistinguishable from reality)',
+        'Highest Quality of AI Image/Video Models to be used',
+        'Bring your reference model/pose/style/anything',
+        'Unlimited Revision'
       ],
       cta: 'Start Your Collection',
       popular: true
