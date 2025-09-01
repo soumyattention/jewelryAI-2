@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ToggleGroup, ToggleGroupItem } from './ui/toggle-group';
 import { Play } from 'lucide-react';
 
@@ -7,6 +7,8 @@ const GalleryGrid = () => {
 
     const [shuffledItems, setShuffledItems] = useState<any[]>([]);
     const [videoErrors, setVideoErrors] = useState<string[]>([]);
+    const [isMobile, setIsMobile] = useState(false);
+    const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
 
     // Gallery items with photos and videos (4:5 aspect ratio optimized)
     const galleryItems = [
@@ -1146,6 +1148,20 @@ const GalleryGrid = () => {
         return shuffled;
     };
 
+    // Detect mobile device
+    useEffect(() => {
+        const checkMobile = () => {
+            const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+            const isMobileDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
+            const isSmallScreen = window.innerWidth <= 768;
+            setIsMobile(isMobileDevice || isSmallScreen);
+        };
+        
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     // Shuffle items on component mount and when page refreshes
     useEffect(() => {
         const shuffled = shuffleArray(galleryItems);
@@ -1157,6 +1173,43 @@ const GalleryGrid = () => {
         console.log(`GalleryGrid: ${videoCount} videos, ${photoCount} photos loaded`);
         console.log('Video IDs:', shuffled.filter(item => item.type === 'video').map(item => item.id));
     }, []);
+
+    // Intersection Observer for mobile video loading
+    useEffect(() => {
+        if (!isMobile) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    const videoId = parseInt(entry.target.getAttribute('data-video-id') || '0');
+                    const video = videoRefs.current[videoId];
+                    
+                    if (video && entry.isIntersecting) {
+                        // Load and play video when it comes into view on mobile
+                        video.load();
+                        video.play().catch((error) => {
+                            console.log('Mobile video autoplay failed:', error);
+                        });
+                    } else if (video && !entry.isIntersecting) {
+                        // Pause video when it goes out of view to save bandwidth
+                        video.pause();
+                    }
+                });
+            },
+            {
+                threshold: 0.5,
+                rootMargin: '50px'
+            }
+        );
+
+        // Observe all video containers
+        const videoContainers = document.querySelectorAll('[data-video-id]');
+        videoContainers.forEach((container) => observer.observe(container));
+
+        return () => {
+            videoContainers.forEach((container) => observer.unobserve(container));
+        };
+    }, [isMobile, shuffledItems]);
 
 
 
@@ -1219,20 +1272,32 @@ const GalleryGrid = () => {
                         <div key={item.id}>
                             <div 
                                 className="group relative overflow-hidden rounded-xl sm:rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                                {...(item.type === 'video' ? { 'data-video-id': item.id } : {})}
                             >
                                 {/* 4:5 Aspect Ratio Container */}
                                 <div className="aspect-[4/5] overflow-hidden relative">
                                     {item.type === 'video' ? (
                                         <video
+                                            ref={(el) => {
+                                                if (el) videoRefs.current[item.id] = el;
+                                            }}
                                             src={item.src}
+                                            poster="https://ik.imagekit.io/soumya3301/video-poster.jpg?tr=w-400,h-500,c-fill,q-80"
                                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 select-none pointer-events-none"
                                             muted
                                             playsInline
-                                            preload="metadata"
-                                            autoPlay
+                                            preload={isMobile ? "none" : "metadata"}
+                                            autoPlay={!isMobile}
                                             loop
+                                            webkit-playsinline="true"
+                                            x5-playsinline="true"
+                                            x5-video-player-type="h5"
+                                            x5-video-player-fullscreen="true"
                                             onLoadStart={() => {
                                                 console.log('Video loading started:', item.src);
+                                                if (isMobile) {
+                                                    console.log('Mobile video loading started:', item.src);
+                                                }
                                             }}
                                             onLoadedMetadata={(e) => {
                                                 const video = e.target as HTMLVideoElement;
@@ -1241,9 +1306,12 @@ const GalleryGrid = () => {
                                             }}
                                             onCanPlay={() => {
                                                 console.log('Video can play:', item.src);
+                                                if (isMobile) {
+                                                    console.log('Mobile video can play:', item.src);
+                                                }
                                             }}
                                             onError={(e) => {
-                                                console.log('Video load error for:', item.src);
+                                                console.error('Video failed to load:', item.src, e);
                                                 setVideoErrors(prev => [...prev, item.src]);
                                                 // Show a fallback image or placeholder when video fails to load
                                                 const videoElement = e.target as HTMLVideoElement;
@@ -1270,6 +1338,13 @@ const GalleryGrid = () => {
                                             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/15 backdrop-blur-md border border-white/25 rounded-full flex items-center justify-center shadow-lg ring-2 ring-white/10">
                                                 <Play className="w-4 h-4 sm:w-5 sm:h-5 text-white/80 ml-0.5" fill="currentColor" />
                                             </div>
+                                        </div>
+                                    )}
+
+                                    {/* Mobile video loading indicator */}
+                                    {item.type === 'video' && isMobile && (
+                                        <div className="absolute top-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">
+                                            Mobile
                                         </div>
                                     )}
 
