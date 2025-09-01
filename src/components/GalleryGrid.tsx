@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { FlipReveal, FlipRevealItem } from './ui/flip-reveal';
 import { ToggleGroup, ToggleGroupItem } from './ui/toggle-group';
-import { X, Play, Eye } from 'lucide-react';
+import { Play } from 'lucide-react';
 
 const GalleryGrid = () => {
     const [selectedCategory, setSelectedCategory] = useState("all");
-    const [selectedMedia, setSelectedMedia] = useState<{ type: 'image' | 'video', url: string } | null>(null);
+
     const [shuffledItems, setShuffledItems] = useState<any[]>([]);
     const [videoErrors, setVideoErrors] = useState<string[]>([]);
 
@@ -914,224 +913,224 @@ const GalleryGrid = () => {
             id: 1001,
             category: "videos",
             type: "video",
-            src: "https://ik.imagekit.io/soumya3301/Gen%20Vid.mp4?updatedAt=1750483666775",
+            src: "https://vz-d4c6dff3-d8a.b-cdn.net/a1b21492-e4b8-4404-a886-280646f57292/play_720p.mp4",
             alt: "AI-generated jewelry video"
         },
        {
     id: 1002,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/Generated%20video%201%20(24)%20copy%202.mp4?updatedAt=1750708620602",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/b862e053-23bf-40b2-aaa3-d66febcd2bc5/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1003,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/AI%20Jewelry%20Video%2042.mp4?updatedAt=1750708649064",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/609a05ad-cac3-42ec-8924-537860b68e3b/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1004,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/My%20Video-18.mp4?updatedAt=1750708651035",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/b4d8f869-9cea-482e-a21d-167dee6163b9/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1005,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/My%20Video-26.mp4?updatedAt=1750708652129",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/2b5866a6-c787-4182-bda6-aacee02876c0/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1006,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/My%20Video-28.mp4?updatedAt=1750708653814",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/ecfa534d-2ff7-4c68-b761-3ca88f1be940/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1007,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/AI%20Jewelry%20Video%2036.mp4?updatedAt=1750708654479",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/79f01df2-be80-4531-9daf-9f0ce4455b01/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1008,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/My%20Video-13%20copy%202.mp4?updatedAt=1750708655371",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/afeae2fd-570b-4dd2-95bb-276da388500a/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1009,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/My%20Video-13%20copy.mp4?updatedAt=1750708657440",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/f65e994c-7c93-4da2-b57f-ecc17aac13a2/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
       {
     id: 1010,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/lzf-2.mp4?updatedAt=1753372308047",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/7c4495a8-61bc-4a0b-9196-e890d5da7c58/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1011,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/Professional_Mode_A_young_woman_with_auburn_hair_s.mp4?updatedAt=1753372325595",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/fa3a7119-6768-4757-9505-716373861794/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1012,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/lzf.mp4?updatedAt=1753372349285",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/f665cc66-e913-4c7a-9929-b9636b516b9d/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1013,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/ik1.mp4?updatedAt=1755140574944",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/e7fd9b51-f98f-4cb7-b6c8-e6fbd12ba927/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1014,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/mya1.mp4?updatedAt=1753372372125",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/03afbc57-7d75-4fd6-b2a3-4404a3b22fd1/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1015,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/eng.mp4?updatedAt=1753372454019",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/bd3fe346-4cc0-4e7c-921a-6f33b9005461/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1016,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/bhr.mp4?updatedAt=1753372467695",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/cb0d47d8-f1fa-4290-9a92-c5522f2f2e75/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1017,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/bello3.mp4?updatedAt=1753372483286",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/c888c333-9e4b-488f-bef4-be5eaf89aafb/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1018,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/bello2.mp4?updatedAt=1753372530604",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/07e88740-930e-4e95-98ea-1289f5815a16/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
 {
     id: 1019,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/Bello1.mp4?updatedAt=1753372532655",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/f46f45ec-cd9c-4e39-99a6-e238732e3258/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
       {
     id: 1020,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/ik2.mp4?updatedAt=1755140577120",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/7b3ef907-0e56-46c5-842c-2ea93fd9788a/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
       {
     id: 1021,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/ik3.mp4?updatedAt=1755140578582",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/b286f134-af73-4e4d-ac0c-6b788b569a0c/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
       {
     id: 1022,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/ik4.mp4?updatedAt=1755140565831",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/10871951-4fdd-4e54-995e-892e0951eae1/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
       {
     id: 1023,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/ik5.mp4?updatedAt=1755141592896",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/bbfa530f-610c-47d9-a811-998681f6b0c9/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
       {
     id: 1024,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/ik6.mp4?updatedAt=1755141590165",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/dd3d169a-5f00-42e2-b5e4-0bce94d93e47/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
       {
     id: 1025,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/ik7.mp4?updatedAt=1755141585360",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/06c9ad7f-aa19-4b41-9b67-aca486fa4a24/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
       {
     id: 1026,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/ik8.mp4?updatedAt=1755141591457",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/ef71e156-1f92-457f-b9da-28aa4188a53c/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
       {
     id: 1027,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/ik9.mp4?updatedAt=1755141589997",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/d85501f2-6aad-4a58-bfce-df167bfb5196/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
       {
     id: 1028,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/ik10.mp4?updatedAt=1755141589398",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/6d1d564d-cef3-49cc-9920-1a86626b5afd/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
       {
     id: 1029,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/ik11.mp4?updatedAt=1755141586326",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/1a71f7a5-8e05-4135-8b52-0a36b16d250f/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
       {
     id: 1030,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/ik12.mp4?updatedAt=1755141583746",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/1aee35f9-f4f2-4d55-90fb-2f4b8ef47263/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
       {
     id: 1031,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/ik13.mp4?updatedAt=1755141697591",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/d52d2f69-eaba-4778-86f1-0476a5a98878/play_720p.mp4",
     alt: "AI-generated jewelry video"
 },
       {
     id: 1032,
     category: "videos",
     type: "video",
-    src: "https://ik.imagekit.io/soumya3301/ik14.mp4?updatedAt=1755141698462",
+    src: "https://vz-d4c6dff3-d8a.b-cdn.net/ed2983fc-01e0-445c-86d9-fa7ad47ce70b/play_720p.mp4",
     alt: "AI-generated jewelry video"
 }
 
@@ -1159,34 +1158,7 @@ const GalleryGrid = () => {
         console.log('Video IDs:', shuffled.filter(item => item.type === 'video').map(item => item.id));
     }, []);
 
-    const openMediaPreview = (item: any) => {
-        setSelectedMedia({
-            type: item.type,
-            url: item.src
-        });
-        // Prevent body scroll when modal is open
-        document.body.style.overflow = 'hidden';
-    };
 
-    const closeMediaPreview = () => {
-        setSelectedMedia(null);
-        // Restore body scroll
-        document.body.style.overflow = '';
-    };
-
-    // Handle escape key to close modal
-    useEffect(() => {
-        const handleEscape = (e: KeyboardEvent) => {
-            if (e.key === 'Escape' && selectedMedia) {
-                closeMediaPreview();
-            }
-        };
-
-        if (selectedMedia) {
-            document.addEventListener('keydown', handleEscape);
-            return () => document.removeEventListener('keydown', handleEscape);
-        }
-    }, [selectedMedia]);
 
     // Filter items based on selected category
     const filteredItems = selectedCategory === "all" 
@@ -1237,23 +1209,16 @@ const GalleryGrid = () => {
                 </div>
 
                 {/* Gallery Grid with Flip Animation - 4:5 Aspect Ratio */}
-                <FlipReveal 
-                    className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8 px-4 sm:px-0 flip-reveal-container gallery-grid-container" 
-                    keys={[selectedCategory]} 
-                    showClass="flex" 
-                    hideClass="hidden"
-                >
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8 px-4 sm:px-0 flip-reveal-container gallery-grid-container">
                     {filteredItems.map((item) => {
                         // Debug: Log each item being rendered
                         if (item.type === 'video') {
                             console.log('Rendering video:', item.id, item.src);
                         }
                         return (
-                        <FlipRevealItem key={item.id} flipKey={item.category}>
+                        <div key={item.id}>
                             <div 
-                                className="group relative overflow-hidden rounded-xl sm:rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer touch-manipulation"
-                                onClick={() => openMediaPreview(item)}
-                                onTouchStart={() => {}} // Enable touch events
+                                className="group relative overflow-hidden rounded-xl sm:rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                             >
                                 {/* 4:5 Aspect Ratio Container */}
                                 <div className="aspect-[4/5] overflow-hidden relative">
@@ -1318,10 +1283,10 @@ const GalleryGrid = () => {
                                     
                                 </div>
                             </div>
-                        </FlipRevealItem>
+                        </div>
                         );
                     })}
-                </FlipReveal>
+                </div>
 
                 {/* Stats */}
                 <div className="mt-12 sm:mt-16 text-center">
@@ -1368,108 +1333,7 @@ const GalleryGrid = () => {
                 </div>
             </div>
 
-            {/* Enhanced Media Preview Modal for Mobile */}
-            {selectedMedia && (
-                <div 
-                    className="fixed inset-0 z-[9999] flex items-center justify-center transition-opacity duration-300 modal-overlay"
-                    style={{ 
-                        touchAction: 'none',
-                        WebkitTouchCallout: 'none',
-                        WebkitUserSelect: 'none',
-                        userSelect: 'none',
-                        background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.3) 0%, rgba(30, 41, 59, 0.4) 25%, rgba(51, 65, 85, 0.3) 50%, rgba(30, 41, 59, 0.4) 75%, rgba(15, 23, 42, 0.3) 100%)',
-                        backdropFilter: 'blur(24px) saturate(180%)',
-                        WebkitBackdropFilter: 'blur(24px) saturate(180%)'
-                    }}
-                    onClick={closeMediaPreview}
-                >
-                    {/* Additional glassmorphic overlay elements */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 pointer-events-none"></div>
-                    <div className="absolute inset-0 bg-gradient-to-tr from-amber-500/5 via-transparent to-yellow-500/5 pointer-events-none"></div>
-                    
-                    {/* Glassmorphic container */}
-                    <div className="relative w-full h-full flex items-center justify-center p-4 sm:p-8 md:p-12">
-                        {/* Close button - Enhanced for mobile */}
-                        <button 
-                            className="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 bg-white/20 backdrop-blur-md text-white border border-white/30 rounded-full shadow-lg hover:bg-white/30 transition-all duration-200 touch-manipulation flex items-center justify-center"
-                            style={{
-                                background: 'rgba(255, 255, 255, 0.15)',
-                                backdropFilter: 'blur(16px)',
-                                WebkitBackdropFilter: 'blur(16px)',
-                                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
-                                width: '48px',
-                                height: '48px',
-                                minWidth: '48px',
-                                minHeight: '48px'
-                            }}
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                closeMediaPreview();
-                            }}
-                            aria-label="Close preview"
-                        >
-                            <X className="w-6 h-6 flex-shrink-0" />
-                        </button>
 
-                        {/* Media container */}
-                        <div 
-                            className="relative w-full h-full max-w-[90vw] max-h-[85vh] sm:max-w-[85vw] sm:max-h-[90vh] md:max-w-[80vw] md:max-h-[85vh] lg:max-w-[75vw] lg:max-h-[80vh] rounded-2xl overflow-hidden flex items-center justify-center"
-                            style={{
-                                background: 'rgba(255, 255, 255, 0.08)',
-                                backdropFilter: 'blur(20px) saturate(180%)',
-                                WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-                                border: '1px solid rgba(255, 255, 255, 0.15)',
-                                boxShadow: '0 25px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05)'
-                            }}
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            {/* Inner glow effect */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 rounded-2xl pointer-events-none"></div>
-                            
-                            {selectedMedia.type === 'image' ? (
-                                <img 
-                                    src={selectedMedia.url} 
-                                    alt="Gallery Preview"
-                                    className="max-w-full max-h-full object-contain select-none"
-                                    draggable={false}
-                                    style={{ 
-                                        touchAction: 'none'
-                                    }}
-                                />
-                            ) : (
-                                <video 
-                                    src={selectedMedia.url}
-                                    controls
-                                    autoPlay
-                                    muted
-                                    playsInline
-                                    className="max-w-full max-h-full object-contain"
-                                    style={{ 
-                                        width: 'auto',
-                                        height: 'auto'
-                                    }}
-                                />
-                            )}
-                        </div>
-
-                        {/* Mobile swipe hint */}
-                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 sm:hidden">
-                            <div 
-                                className="text-white px-4 py-2 rounded-full text-sm"
-                                style={{
-                                    background: 'rgba(255, 255, 255, 0.12)',
-                                    backdropFilter: 'blur(16px)',
-                                    WebkitBackdropFilter: 'blur(16px)',
-                                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
-                                }}
-                            >
-                                Tap outside to close
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
         </section>
     );
 };
