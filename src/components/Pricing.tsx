@@ -99,10 +99,7 @@ const Pricing = () => {
 
                 {/* CTA Button */}
                 <a 
-                  href={pkg.name === 'First Look' 
-                    ? "https://checkout.dodopayments.com/buy/pdt_rbD4D5ZCYfTy2cREbI1yW?quantity=1&redirect_url=https://wa.link%2F87jro9"
-                    : "https://checkout.dodopayments.com/buy/pdt_YvrRJlJyQpi00DO6W3A00?quantity=1&redirect_url=https://wa.link%2Fbm4xlq"
-                  }
+                  href="https://wa.me/447727727748"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full py-4 px-6 rounded-xl font-semibold transition-all duration-200 flex items-center justify-center space-x-2 touch-manipulation min-h-[48px] text-base sm:text-base ${

@@ -151,7 +151,7 @@ const FinalCTA = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 sm:mb-8 px-4 sm:px-0">
               <a 
                 ref={buttonRef}
-                href="https://checkout.dodopayments.com/buy/pdt_rbD4D5ZCYfTy2cREbI1yW?quantity=1&redirect_url=https://wa.link%2F87jro9"
+                href="https://wa.me/447727727748"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 sm:px-10 py-4 rounded-xl font-bold text-lg sm:text-lg hover:from-emerald-600 hover:to-green-700 hover:glow-green-intense transform hover:scale-105 transition-all duration-200 shadow-2xl flex items-center space-x-2 touch-manipulation min-h-[48px] w-full sm:w-auto justify-center"
