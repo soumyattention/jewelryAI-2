@@ -6,10 +6,10 @@ const Pricing = () => {
     {
       name: 'First Look',
       price: '$99',
-      description: 'Perfect for testing our quality',
+      description: 'Perfect for quality testing',
       features: [
         'Up to 3 Jewelry Articles',
-        '5 AI Jewelry Photoshoots',
+        '3 AI Jewelry Photoshoots',
         '1 Creative Cinematic Video',
         '7 Days Delivery',
         '1 Revision Request'
@@ -18,11 +18,26 @@ const Pricing = () => {
       popular: false
     },
     {
+      name: 'Launch',
+      price: '$499',
+      description: 'Your perfect pivot to AI',
+      features: [
+        'Up to 25 AI Jewelry Photoshoots',
+        'Up to 10 AI Cinematic Videos',
+        'Most Natural AI Models (indistinguishable from reality)',
+        'Highest Quality of AI Image/Video Models to be used',
+        'Bring your reference model/pose/style/anything',
+        'Unlimited Revision'
+      ],
+      cta: 'Launch Your Brand',
+      popular: true
+    },
+    {
       name: 'The Collection',
-      price: '$599',
+      price: '$799',
       description: 'One month of highest-quality contents',
       features: [
-        'Up to 60 AI Photoshoot',
+        'Up to 50 AI Jewelry Photoshoots (Upscaled to 4K)',
         'Up to 20 AI Cinematic Videos (30s 1080p each)',
         'Most Natural AI Models (indistinguishable from reality)',
         'Highest Quality of AI Image/Video Models to be used',
@@ -30,7 +45,7 @@ const Pricing = () => {
         'Unlimited Revision'
       ],
       cta: 'Start Your Collection',
-      popular: true
+      popular: false
     }
   ];
 
@@ -47,7 +62,7 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto px-4 sm:px-0">
+        <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto px-4 sm:px-0">
           {packages.map((pkg, index) => (
             <div 
               key={index}
