@@ -37,7 +37,7 @@ const Pricing = () => {
       price: '$799',
       description: 'One month of highest-quality contents',
       features: [
-        'Up to 50 AI Jewelry Photoshoots (Upscaled to 4K)',
+        'Up to 60 AI Jewelry Photoshoots (Upscaled to 4K)',
         'Up to 20 AI Cinematic Videos (30s 1080p each)',
         'Most Natural AI Models (indistinguishable from reality)',
         'Highest Quality of AI Image/Video Models to be used',

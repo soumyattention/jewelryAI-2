@@ -910,264 +910,642 @@ const GalleryGrid = () => {
     src: "https://ik.imagekit.io/soumya3301/P1%20(1).png?updatedAt=1755161855012",
     alt: "AI-generated jewelry photography"
 },
+{
+    id: 131,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x145.jpeg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 132,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x144.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 133,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x143.jpeg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 134,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x142.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 135,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x141.jpeg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 136,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x140.jpeg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 137,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x139.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 138,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x138.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 139,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x137.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 140,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x136.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 141,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x135.jpg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 142,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x134.jpg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 143,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x133.jpg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 144,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x132.jpg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 145,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x131.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 146,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x130.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 147,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x129.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 148,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x128.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 149,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x127.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 150,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x126.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 151,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x125.jpg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 152,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x124.jpeg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 153,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x123.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 154,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x122.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 155,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x100.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 156,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x121.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 157,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x120.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 158,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x119.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 159,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x118.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 160,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x117.jpeg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 161,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x116.jpeg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 162,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x115.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 163,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x114.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 164,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x113.jpeg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 165,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x112.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 166,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x111.jpg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 167,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x110.jpg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 168,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x109.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 169,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x108.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 170,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x107.jpeg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 171,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x106.jpg",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 172,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x105.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 173,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x104.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 174,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x103.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 175,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x102.png",
+    alt: "AI-generated jewelry photography"
+},
+{
+    id: 176,
+    category: "photos",
+    type: "image",
+    src: "https://ik.imagekit.io/soumya3301/x101.png",
+    alt: "AI-generated jewelry photography"
+},
 
-        // Videos - Add your video URLs here
+        // Videos - Cloudflare CDN URLs
         {
             id: 1001,
             category: "videos",
             type: "video",
-            src: "https://vz-d4c6dff3-d8a.b-cdn.net/a1b21492-e4b8-4404-a886-280646f57292/play_720p.mp4",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/11bd29a8618d3588483ee74cfe8c2bde/downloads/default.mp4",
             alt: "AI-generated jewelry video",
             autoplay: true
         },
-       {
-    id: 1002,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/b862e053-23bf-40b2-aaa3-d66febcd2bc5/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1003,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/609a05ad-cac3-42ec-8924-537860b68e3b/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1004,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/b4d8f869-9cea-482e-a21d-167dee6163b9/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1005,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/2b5866a6-c787-4182-bda6-aacee02876c0/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1006,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/ecfa534d-2ff7-4c68-b761-3ca88f1be940/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1007,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/79f01df2-be80-4531-9daf-9f0ce4455b01/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1008,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/afeae2fd-570b-4dd2-95bb-276da388500a/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1009,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/f65e994c-7c93-4da2-b57f-ecc17aac13a2/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-      {
-    id: 1010,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/7c4495a8-61bc-4a0b-9196-e890d5da7c58/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1011,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/fa3a7119-6768-4757-9505-716373861794/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1012,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/f665cc66-e913-4c7a-9929-b9636b516b9d/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1013,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/e7fd9b51-f98f-4cb7-b6c8-e6fbd12ba927/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1014,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/03afbc57-7d75-4fd6-b2a3-4404a3b22fd1/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1015,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/bd3fe346-4cc0-4e7c-921a-6f33b9005461/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1016,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/cb0d47d8-f1fa-4290-9a92-c5522f2f2e75/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1017,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/c888c333-9e4b-488f-bef4-be5eaf89aafb/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1018,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/07e88740-930e-4e95-98ea-1289f5815a16/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-{
-    id: 1019,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/f46f45ec-cd9c-4e39-99a6-e238732e3258/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-      {
-    id: 1020,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/7b3ef907-0e56-46c5-842c-2ea93fd9788a/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-      {
-    id: 1021,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/b286f134-af73-4e4d-ac0c-6b788b569a0c/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-      {
-    id: 1022,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/10871951-4fdd-4e54-995e-892e0951eae1/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-      {
-    id: 1011,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/7c4495a8-61bc-4a0b-9196-e890d5da7c58/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-      {
-    id: 1024,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/dd3d169a-5f00-42e2-b5e4-0bce94d93e47/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-      {
-    id: 1025,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/06c9ad7f-aa19-4b41-9b67-aca486fa4a24/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-      {
-    id: 1026,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/ef71e156-1f92-457f-b9da-28aa4188a53c/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-      {
-    id: 1027,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/d85501f2-6aad-4a58-bfce-df167bfb5196/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-      {
-    id: 1028,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/6d1d564d-cef3-49cc-9920-1a86626b5afd/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-      {
-    id: 1029,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/1a71f7a5-8e05-4135-8b52-0a36b16d250f/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-      {
-    id: 1030,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/1aee35f9-f4f2-4d55-90fb-2f4b8ef47263/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-      {
-    id: 1031,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/d52d2f69-eaba-4778-86f1-0476a5a98878/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-},
-      {
-    id: 1032,
-    category: "videos",
-    type: "video",
-    src: "https://vz-d4c6dff3-d8a.b-cdn.net/ed2983fc-01e0-445c-86d9-fa7ad47ce70b/play_720p.mp4",
-    alt: "AI-generated jewelry video",
-    autoplay: true
-}
+        {
+            id: 1002,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/c2cf606977cab39c4c066eb9f4e843ec/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1003,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/db7419e264d5f9df2b811112e28af16a/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1004,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/6bf8f32ecd01b2b4743b9b11b8c9f421/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1005,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/badc42d3035666b2cca8fb2cd873f5e8/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1006,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/12621081b5a19c4e0c139c322680050d/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1007,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/6d4b5824aa9cfb93c62ed9cb15cbba7e/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1008,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/c1d5b723f2cedcc108dbbaf5f784a0f5/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1009,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/42295164ae7ec1ed6891b98e245d0983/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1010,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/1a1e37ef8d66075a08458ed092947b43/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1011,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/f7c45583b5597152a28e3419049f43b0/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1012,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/8cdb09de52c7e3fb0f01b23f1a32c26d/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1013,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/3df8196f6cefb1def61a8ee3ecfe4cae/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1014,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/8d24b8b30f0e0c508951f8cee36d079e/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1015,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/403fccbf1df3781f152be5efd20fa8e9/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1016,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/2d68b15717c3f5aaf906e8dbbab70409/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1017,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/2b7423f8c70b27bc0d7ebb807160a4f1/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1018,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/140b167edb888394c4d55110bff267d7/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1019,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/c7760494f8cb1b6589de6d180d3bb19a/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1020,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/ae5f301bffbf38a4a8dd41e28fc3dece/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1021,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/6fa909b2b972b775b127c09c0c373bcf/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1022,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/1cacc6a93122e9fdbbe620249bde1f7c/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1023,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/f1be1a9ceaf08a0202e9d241d00c3169/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1024,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/ac031348fafaaba25c48f1d4d5cb5379/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1025,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/39381b4ec05b9a0963a46954eb40d0cd/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1026,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/ce7a44e9478d2b32d16c8015f546e274/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1027,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/2b3dc8c63a721d95d7c3a9f373178614/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1028,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/2de96310b60c883e07c0ae239937ad8c/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1029,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/250c46d05655a676c8c6ed757e8ae3ee/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1030,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/f891d20d31e77d2801de88f58300e927/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1031,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/7f290a70aed5996d4c2ebd064454f55f/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1032,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/c4b49eff1a5275aeda8d4558c614ae7b/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1033,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/116f5afcc7cdfb8f20b91f78cbc7fb5b/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1034,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/ef45d516db3816983862a5f1a35ed5e7/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1035,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/2bedeac4d49e39963cfb5c562e06ebb2/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1036,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/d17983cdd380ed9c11e960c79f082bc9/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1037,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/100f8c523455da241d6d30ea76726c0a/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1038,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/b5a55d0eb16dd549a0a8b329b76c9127/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        },
+        {
+            id: 1039,
+            category: "videos",
+            type: "video",
+            src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/73fa55b85efe595a0a41ff6f69daafaf/downloads/default.mp4",
+            alt: "AI-generated jewelry video",
+            autoplay: true
+        }
 
     ];
 
