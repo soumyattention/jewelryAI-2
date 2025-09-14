@@ -9,7 +9,7 @@ const Pricing = () => {
       description: 'Perfect for quality testing',
       features: [
         'Up to 3 Jewelry Articles',
-        '3 AI Jewelry Photoshoots',
+        '3 AI Editorial Photoshoots',
         '1 Creative Cinematic Video',
         '7 Days Delivery',
         '1 Revision Request'
@@ -22,7 +22,7 @@ const Pricing = () => {
       price: '$499',
       description: 'Your perfect pivot to AI',
       features: [
-        'Up to 25 AI Jewelry Photoshoots',
+        'Up to 25 AI Editorial Photoshoots',
         'Up to 10 AI Cinematic Videos',
         'Most Natural AI Models (indistinguishable from reality)',
         'Highest Quality of AI Image/Video Models to be used',
@@ -37,7 +37,7 @@ const Pricing = () => {
       price: '$799',
       description: 'One month of highest-quality contents',
       features: [
-        'Up to 60 AI Jewelry Photoshoots (Upscaled to 4K)',
+        'Up to 60 AI Editorial Photoshoots (Upscaled to 4K)',
         'Up to 20 AI Cinematic Videos (30s 1080p each)',
         'Most Natural AI Models (indistinguishable from reality)',
         'Highest Quality of AI Image/Video Models to be used',
