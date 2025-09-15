@@ -165,9 +165,11 @@ export const PhotoGallery = ({
         </motion.div>
       </div>
       <div className="flex w-full justify-center">
-        <Button className="bg-gradient-to-r from-amber-500 to-yellow-600 text-white hover:from-amber-600 hover:to-yellow-700 touch-manipulation min-h-[48px] px-6 sm:px-8 text-sm sm:text-base">
-                          View All Gallery
-        </Button>
+        <a href="/galleryx">
+          <Button className="bg-gradient-to-r from-amber-500 to-yellow-600 text-white hover:from-amber-600 hover:to-yellow-700 touch-manipulation min-h-[48px] px-6 sm:px-8 text-sm sm:text-base">
+                            View All Gallery
+          </Button>
+        </a>
       </div>
     </div>
   );

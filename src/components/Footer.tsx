@@ -103,7 +103,7 @@ const Footer = () => {
               </Link>
               
               <Link 
-                to="/gallery"
+                to="/galleryx"
                 className="group flex items-center space-x-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 touch-manipulation py-1"
               >
                 <div className="w-2 h-2 bg-amber-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>

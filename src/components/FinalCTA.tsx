@@ -164,7 +164,7 @@ const FinalCTA = () => {
               </a>
               
               <button className="group bg-white/10 backdrop-blur-sm text-white px-6 sm:px-8 py-4 rounded-xl font-semibold text-lg sm:text-lg border border-white/20 hover:bg-white/20 transition-all duration-200 flex items-center space-x-2 touch-manipulation min-h-[48px] w-full sm:w-auto justify-center">
-                                        <a href="/gallery" className="flex items-center space-x-2">
+                                        <a href="/galleryx" className="flex items-center space-x-2">
                                       <span>View Gallery</span>
                 </a>
               </button>
