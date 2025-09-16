@@ -754,7 +754,7 @@ const FurniturePage = () => {
                 ],
                 cta: 'Get Started',
                 popular: false,
-                link: 'https://wa.me/447727727748'
+                link: 'https://checkout.dodopayments.com/buy/pdt_rbD4D5ZCYfTy2cREbI1yW?quantity=1'
               },
               {
                 name: 'The Collection',
