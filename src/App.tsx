@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import QAPage from './pages/QAPage';
 import Gallery from './pages/Gallery';
 import GalleryX from './pages/GalleryX';
 import FurniturePage from './pages/FurniturePage';
@@ -18,6 +19,7 @@ function App() {
     <div className="min-h-screen bg-white font-inter flex flex-col">
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/qa" element={<QAPage />} />
         <Route path="/portfolio" element={<Navigate to="/galleryx" replace />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/galleryx" element={<GalleryX />} />
