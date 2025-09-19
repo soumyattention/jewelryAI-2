@@ -13,6 +13,7 @@ import TermsOfService from './pages/TermsOfService';
 import TestPage from './pages/TestPage';
 import CloudinaryTestPage from './pages/CloudinaryTestPage';
 import CloudinaryOptimizationDemo from './pages/CloudinaryOptimizationDemo';
+import CustomPaymentPage from './pages/CustomPaymentPage';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/test" element={<TestPage />} />
         <Route path="/cloudinary-test" element={<CloudinaryTestPage />} />
         <Route path="/cloudinary-demo" element={<CloudinaryOptimizationDemo />} />
+        <Route path="/custom" element={<CustomPaymentPage />} />
       </Routes>
     </div>
   );

@@ -161,6 +161,16 @@ const Pricing = () => {
             </div>
             <span className="font-medium text-base sm:text-base">100% Satisfaction Guaranteed</span>
           </div>
+          {/* Custom Payment Option */}
+          <div className="mt-12 text-center">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Need a Custom Package?</h3>
+            <a 
+              href="/custom-payment"
+              className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Custom Payment
+            </a>
+          </div>
         </div>
       </div>
     </section>
