@@ -1,32 +1,47 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ToggleGroup, ToggleGroupItem } from './ui/toggle-group';
 import { Play } from 'lucide-react';
+import { getFileNameFromUrl } from '../lib/utils'; // Import the utility function
+
+// Define an interface for gallery items
+interface GalleryItem {
+    id: number;
+    category: "photos" | "videos";
+    type: "image" | "video";
+    src: string;
+    alt: string;
+    autoplay?: boolean;
+    selected?: boolean; // Make selected optional as not all items might have it initially
+}
 
 const GalleryGrid = () => {
-    const [selectedCategory, setSelectedCategory] = useState("all");
+    const [selectedCategory, setSelectedCategory] = useState<"all" | "photos" | "videos" | "selected">("selected"); // Set default to "selected"
+    const [selectedItemIds, setSelectedItemIds] = useState<number[]>([]); // State to hold selected item IDs
 
-    const [shuffledItems, setShuffledItems] = useState<any[]>([]);
+    const [shuffledItems, setShuffledItems] = useState<GalleryItem[]>([]);
     const [videoErrors, setVideoErrors] = useState<string[]>([]);
     const [isMobile, setIsMobile] = useState(false);
 
     const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
 
     // Gallery items with photos and videos (4:5 aspect ratio optimized)
-    const galleryItems = [
+    const galleryItems: GalleryItem[] = [
         // Photos
         {
             id: 1,
             category: "photos",
             type: "image",
             src: "https://ik.imagekit.io/soumya3301/3.png?updatedAt=1750483598664",
-            alt: "AI-generated jewelry photography"
+            alt: "AI-generated jewelry photography",
+            selected: true // Mark as selected for demo
         },
         {
             id: 2,
             category: "photos", 
             type: "image",
             src: "https://ik.imagekit.io/soumya3301/8.png?updatedAt=1750483597465",
-            alt: "AI-generated jewelry photography"
+            alt: "AI-generated jewelry photography",
+            selected: true // Mark as selected for demo
         },
         {
             id: 3,
@@ -1550,7 +1565,7 @@ const GalleryGrid = () => {
     ];
 
     // Shuffle function
-    const shuffleArray = (array: any[]) => {
+    const shuffleArray = (array: GalleryItem[]): GalleryItem[] => {
         const shuffled = [...array];
         for (let i = shuffled.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -1588,7 +1603,7 @@ const GalleryGrid = () => {
     // Intersection Observer for viewport-based video autoplay (both mobile and desktop)
     useEffect(() => {
         const observer = new IntersectionObserver(
-            (entries) => {
+            (entries: IntersectionObserverEntry[]) => {
                 entries.forEach((entry) => {
                     const videoId = parseInt(entry.target.getAttribute('data-video-id') || '0');
                     const video = videoRefs.current[videoId];
@@ -1602,7 +1617,7 @@ const GalleryGrid = () => {
                         
                         // Only autoplay if the video has autoplay enabled
                         if (videoItem.autoplay) {
-                            video.play().catch((error) => {
+                            video.play().catch((error: DOMException) => {
                                 console.log('Video autoplay failed:', error);
                             });
                         }
@@ -1622,10 +1637,10 @@ const GalleryGrid = () => {
 
         // Observe all video containers
         const videoContainers = document.querySelectorAll('[data-video-id]');
-        videoContainers.forEach((container) => observer.observe(container));
+        videoContainers.forEach((container) => observer.observe(container as Element));
 
         return () => {
-            videoContainers.forEach((container) => observer.unobserve(container));
+            videoContainers.forEach((container) => observer.unobserve(container as Element));
         };
     }, [isMobile, shuffledItems]);
 
@@ -1636,7 +1651,49 @@ const GalleryGrid = () => {
     // Filter items based on selected category
     const filteredItems = selectedCategory === "all" 
         ? shuffledItems 
-        : shuffledItems.filter(item => item.category === selectedCategory);
+        : selectedCategory === "selected"
+            ? shuffledItems.filter(item => item.selected) // Filter by selected items
+            : shuffledItems.filter(item => item.category === selectedCategory);
+
+    // Function to toggle item selection
+    const toggleItemSelection = (itemId: number) => {
+        setShuffledItems(prevItems => 
+            prevItems.map((item: GalleryItem) => {
+                if (item.id === itemId) {
+                    const newItem: GalleryItem = { ...item, selected: !item.selected };
+                    // Update selectedItemIds state
+                    if (newItem.selected) {
+                        setSelectedItemIds(prevIds => [...prevIds, itemId]);
+                    } else {
+                        setSelectedItemIds(prevIds => prevIds.filter(id => id !== itemId));
+                    }
+                    return newItem;
+                }
+                return item;
+            })
+        );
+    };
+
+    // Function to set initial selected items
+    const setInitialSelectedItems = (ids: number[]) => {
+        setShuffledItems(prevItems => 
+            prevItems.map((item: GalleryItem) => {
+                if (ids.includes(item.id)) {
+                    return { ...item, selected: true };
+                }
+                return item;
+            })
+        );
+        setSelectedItemIds(ids); // Also update the selectedItemIds state
+    };
+
+    // Set initial selected items on component mount
+    useEffect(() => {
+        setInitialSelectedItems([
+            106, 128, 159, 9, 37, 130, 148, 67, 81, 116, 132, 158, 57, 127, 56, 34, 113, 151, 55, 144, 150, 147, 29, 137, 141, 41, 102, 129, 162, 156, 13, 136, 80, 64, 169, 32, 146, 79, 107, 117, 155, 131, 163, 165, 172, 33, 125
+        ]); // Set initial selected items based on user's list
+    }, []);
+
 
     return (
         <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white to-gray-50 relative z-0 gallery-section">
@@ -1658,8 +1715,14 @@ const GalleryGrid = () => {
                         type="single"
                         className="bg-white/80 backdrop-blur-sm rounded-xl border border-gray-200/50 p-1 shadow-lg flex-wrap gap-1 sm:gap-0"
                         value={selectedCategory}
-                        onValueChange={(value) => setSelectedCategory(value || "all")}
+                        onValueChange={(value: string) => setSelectedCategory(value as "all" | "photos" | "videos" | "selected" || "selected")}
                     >
+                        <ToggleGroupItem 
+                            value="selected" 
+                            className="px-4 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base font-medium data-[state=on]:bg-gradient-to-r data-[state=on]:from-amber-500 data-[state=on]:to-yellow-600 data-[state=on]:text-white hover:bg-amber-50 min-h-[44px] touch-manipulation"
+                        >
+                            Selected
+                        </ToggleGroupItem>
                         <ToggleGroupItem 
                             value="all" 
                             className="px-4 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base font-medium data-[state=on]:bg-gradient-to-r data-[state=on]:from-amber-500 data-[state=on]:to-yellow-600 data-[state=on]:text-white hover:bg-amber-50 min-h-[44px] touch-manipulation"
@@ -1683,7 +1746,7 @@ const GalleryGrid = () => {
 
                 {/* Gallery Grid with Flip Animation - 4:5 Aspect Ratio */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8 px-4 sm:px-0 flip-reveal-container gallery-grid-container">
-                    {filteredItems.map((item) => {
+                    {filteredItems.map((item: GalleryItem) => {
                         // Debug: Log each item being rendered
                         if (item.type === 'video') {
                             console.log('Rendering video:', item.id, item.src);
@@ -1692,14 +1755,14 @@ const GalleryGrid = () => {
                         <div key={item.id}>
                             <div 
                                 className="group relative overflow-hidden rounded-xl sm:rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                                {...(item.type === 'video' ? { 'data-video-id': item.id } : {})}
+                                {...(item.type === 'video' ? { 'data-video-id': item.id.toString() } : {})}
 
                             >
                                 {/* 4:5 Aspect Ratio Container */}
                                 <div className="aspect-[4/5] overflow-hidden relative">
                                     {item.type === 'video' ? (
                                         <video
-                                            ref={(el) => {
+                                            ref={(el: HTMLVideoElement | null) => {
                                                 if (el) videoRefs.current[item.id] = el;
                                             }}
                                             src={item.src}
@@ -1720,8 +1783,8 @@ const GalleryGrid = () => {
                                                     console.log('Mobile video loading started:', item.src);
                                                 }
                                             }}
-                                            onLoadedMetadata={(e) => {
-                                                const video = e.target as HTMLVideoElement;
+                                            onLoadedMetadata={(e: React.SyntheticEvent<HTMLVideoElement>) => {
+                                                const video = e.currentTarget as HTMLVideoElement;
                                                 video.currentTime = 0.1; // Set to a small time to generate thumbnail
                                                 console.log('Video loaded successfully:', item.src);
                                             }}
@@ -1731,11 +1794,11 @@ const GalleryGrid = () => {
                                                     console.log('Mobile video can play:', item.src);
                                                 }
                                             }}
-                                            onError={(e) => {
+                                            onError={(e: React.SyntheticEvent<HTMLVideoElement>) => {
                                                 console.error('Video failed to load:', item.src, e);
                                                 setVideoErrors(prev => [...prev, item.src]);
                                                 // Show a fallback image or placeholder when video fails to load
-                                                const videoElement = e.target as HTMLVideoElement;
+                                                const videoElement = e.currentTarget as HTMLVideoElement;
                                                 videoElement.style.display = 'none';
                                                 // Create a fallback div
                                                 const fallback = document.createElement('div');
@@ -1743,7 +1806,6 @@ const GalleryGrid = () => {
                                                 fallback.innerHTML = '<div class="text-gray-500 text-sm">Video unavailable</div>';
                                                 videoElement.parentElement?.appendChild(fallback);
                                             }}
-
                                         />
                                     ) : (
                                         <img
@@ -1754,6 +1816,8 @@ const GalleryGrid = () => {
                                         />
                                     )}
                                     
+                                    {/* File name overlay (removed) */}
+
                                     {/* Video icon indicator for all videos */}
                                     {item.type === 'video' && (
                                         <div className="absolute top-3 right-3 pointer-events-none">
@@ -1762,6 +1826,15 @@ const GalleryGrid = () => {
                                             </div>
                                         </div>
                                     )}
+                                    
+                                    {/* Removed visual indicator for selected items (yellow tick) */}
+
+                                    {/* Add click handler to toggle selection */}
+                                    <button 
+                                        onClick={() => toggleItemSelection(item.id)}
+                                        className="absolute inset-0 w-full h-full z-0" 
+                                        aria-label="Toggle selection"
+                                    />
 
 
 
@@ -1779,6 +1852,18 @@ const GalleryGrid = () => {
                         );
                     })}
                 </div>
+
+                {/* Show All Photos and Videos Button */}
+                {selectedCategory === "selected" && (
+                    <div className="mt-12 sm:mt-16 text-center">
+                        <button
+                            onClick={() => setSelectedCategory("all")}
+                            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 shadow-lg transition-all duration-300 transform hover:scale-105"
+                        >
+                            Show All Photos and Videos
+                        </button>
+                    </div>
+                )}
 
                 {/* Stats */}
                 <div className="mt-12 sm:mt-16 text-center">
