@@ -1865,49 +1865,6 @@ const GalleryGrid = () => {
                     </div>
                 )}
 
-                {/* Stats */}
-                <div className="mt-12 sm:mt-16 text-center">
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
-                        <div>
-                            <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">
-                                {shuffledItems.filter(item => item.type === 'image').length}+
-                            </div>
-                            <div className="text-sm sm:text-base text-gray-600">Curated Photos</div>
-                        </div>
-                        <div>
-                            <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">
-                                {shuffledItems.filter(item => item.type === 'video').length}
-                            </div>
-                            <div className="text-sm sm:text-base text-gray-600">Curated Videos</div>
-                        </div>
-                        <div className="col-span-2 sm:col-span-1">
-                            <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">Premium</div>
-                            <div className="text-sm sm:text-base text-gray-600">Quality</div>
-                        </div>
-                    </div>
-                    
-                    {/* Debug Info - Only show in development */}
-                    {process.env.NODE_ENV === 'development' && (
-                        <div className="mt-8 p-4 bg-gray-100 rounded-lg">
-                            <h3 className="text-lg font-semibold mb-2">Debug Info</h3>
-                            <p>Total Items: {shuffledItems.length}</p>
-                            <p>Photos: {shuffledItems.filter(item => item.type === 'image').length}</p>
-                            <p>Videos: {shuffledItems.filter(item => item.type === 'video').length}</p>
-                            <p>Video Errors: {videoErrors.length}</p>
-                            {videoErrors.length > 0 && (
-                                <div className="mt-2 text-left">
-                                    <p className="font-semibold">Failed Videos:</p>
-                                    <ul className="text-sm text-red-600">
-                                        {videoErrors.slice(0, 5).map((error, index) => (
-                                            <li key={index} className="truncate">{error}</li>
-                                        ))}
-                                        {videoErrors.length > 5 && <li>... and {videoErrors.length - 5} more</li>}
-                                    </ul>
-                                </div>
-                            )}
-                        </div>
-                    )}
-                </div>
             </div>
 
 
