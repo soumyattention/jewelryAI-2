@@ -7,7 +7,6 @@ import CompetitiveComparison from '../components/CompetitiveComparison';
 import HowItWorks from '../components/HowItWorks';
 import Portfolio3DCarousel from '../components/Portfolio3DCarousel';
 import Pricing from '../components/Pricing';
-import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import Team from '../components/Team';
 import USPs from '../components/USPs';
@@ -30,7 +29,6 @@ const HomePage = () => {
       <HowItWorks />
       <Portfolio3DCarousel />
       <Pricing />
-      <Testimonials />
       <FAQ />
       <Team />
       <USPs />
