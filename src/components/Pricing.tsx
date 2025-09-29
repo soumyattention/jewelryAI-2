@@ -9,7 +9,7 @@ const Pricing = () => {
       description: 'Perfect for quality testing',
       features: [
         'Up to 3 Jewelry Articles',
-        '3 AI Editorial Photoshoots',
+        '5 AI Editorial Photoshoots',
         '1 Creative Cinematic Video',
         '7 Days Delivery',
         '1 Revision Request'
