@@ -79,7 +79,7 @@ const RefundsPolicy = () => {
         },
         {
           subtitle: 'During Production',
-          text: 'If you need to cancel while work is in progress, we\'ll provide a partial refund based on the percentage of work completed. You\'ll receive any completed deliverables.'
+          text: 'If you need to cancel while work is in progress, the maximum refundable amount will be 50% of the order value. This policy accounts for the significant time and resources invested in producing high-quality images and videos, as well as the upfront costs associated with compensating our dedicated team members for their specialized efforts.'
         },
         {
           subtitle: 'Subscription Services',
