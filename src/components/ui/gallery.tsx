@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import { cn } from "../../lib/utils";
 import { Button } from "./button";
+import { galleryItems } from "../../lib/gallery-data";
 
 export const PhotoGallery = ({
   animationDelay = 0.5,
@@ -66,54 +67,26 @@ export const PhotoGallery = ({
     }),
   };
 
+  // Get 5 random selected photos
+  const selectedPhotos = galleryItems.filter(item => item.selected && item.type === 'image');
+  const shuffledSelected = selectedPhotos.sort(() => 0.5 - Math.random());
+  const randomPhotos = shuffledSelected.slice(0, 5);
+
   // Photo positions - horizontal layout with random y offsets
-  const photos = [
-    {
-      id: 1,
-      order: 0,
-      x: "-320px",
-      y: "15px",
-      zIndex: 50,
-      direction: "left" as Direction,
-      src: "https://ik.imagekit.io/soumya3301/3.png?updatedAt=1750483598664",
-    },
-    {
-      id: 2,
-      order: 1,
-      x: "-160px",
-      y: "32px",
-      zIndex: 40,
-      direction: "left" as Direction,
-      src: "https://ik.imagekit.io/soumya3301/p10.jpg?updatedAt=1753373684828",
-    },
-    {
-      id: 3,
-      order: 2,
-      x: "0px",
-      y: "8px",
-      zIndex: 30,
-      direction: "right" as Direction,
-      src: "https://ik.imagekit.io/soumya3301/bln37.jpg?updatedAt=1753373682988",
-    },
-    {
-      id: 4,
-      order: 3,
-      x: "160px",
-      y: "22px",
-      zIndex: 20,
-      direction: "right" as Direction,
-      src: "https://ik.imagekit.io/soumya3301/1.png?updatedAt=1750483666775",
-    },
-    {
-      id: 5,
-      order: 4,
-      x: "320px",
-      y: "44px",
-      zIndex: 10,
-      direction: "left" as Direction,
-      src: "https://ik.imagekit.io/soumya3301/2.png?updatedAt=1750483598632",
-    },
-  ];
+  const photos = randomPhotos.map((photo, index) => {
+    const positions = [
+      { x: "-320px", y: "15px", zIndex: 50, direction: "left" as Direction },
+      { x: "-160px", y: "32px", zIndex: 40, direction: "left" as Direction },
+      { x: "0px", y: "8px", zIndex: 30, direction: "right" as Direction },
+      { x: "160px", y: "22px", zIndex: 20, direction: "right" as Direction },
+      { x: "320px", y: "44px", zIndex: 10, direction: "left" as Direction },
+    ];
+    return {
+      ...photo,
+      order: index,
+      ...positions[index],
+    };
+  });
 
   return (
     <div className="mt-8 sm:mt-12 relative z-0 photo-gallery-container">
