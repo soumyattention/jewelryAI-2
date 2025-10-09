@@ -15,6 +15,7 @@ import CloudinaryTestPage from './pages/CloudinaryTestPage';
 import CloudinaryOptimizationDemo from './pages/CloudinaryOptimizationDemo';
 import CustomPaymentPage from './pages/CustomPaymentPage';
 import SurgAIPage from './pages/SurgAIPage';
+import PricingPage from './pages/PricingPage';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/cloudinary-demo" element={<CloudinaryOptimizationDemo />} />
         <Route path="/custom" element={<CustomPaymentPage />} />
         <Route path="/surgai" element={<SurgAIPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
       </Routes>
     </div>
   );
