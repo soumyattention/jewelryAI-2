@@ -104,8 +104,8 @@ const Hero = () => {
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </a>
               
-              <a 
-                                        href="/galleryx"
+              <a
+                                        href="/gallery"
                 className="group flex items-center justify-center space-x-2 bg-white/20 backdrop-blur-md text-gray-800 px-6 sm:px-8 py-4 sm:py-4 rounded-xl font-semibold text-lg sm:text-lg border border-white/30 hover:bg-white/30 hover:border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 touch-manipulation min-h-[48px]"
               >
                 <Play className="w-4 h-4 sm:w-5 sm:h-5" />

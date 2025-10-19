@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/qa" element={<QAPage />} />
-        <Route path="/portfolio" element={<Navigate to="/galleryx" replace />} />
+        <Route path="/portfolio" element={<Navigate to="/gallery" replace />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/galleryx" element={<GalleryX />} />
         <Route path="/admin" element={<AdminPage />} />
