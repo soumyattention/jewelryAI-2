@@ -72,19 +72,32 @@ export const PhotoGallery = ({
   const shuffledSelected = selectedPhotos.sort(() => 0.5 - Math.random());
   const randomPhotos = shuffledSelected.slice(0, 5);
 
-  // Photo positions - horizontal layout with random y offsets
+  // Photo positions - responsive layout for mobile and desktop
   const photos = randomPhotos.map((photo, index) => {
-    const positions = [
+    // Mobile positions - more compact
+    const mobilePositions = [
+      { x: "-200px", y: "10px", zIndex: 50, direction: "left" as Direction },
+      { x: "-100px", y: "20px", zIndex: 40, direction: "left" as Direction },
+      { x: "0px", y: "5px", zIndex: 30, direction: "right" as Direction },
+      { x: "100px", y: "15px", zIndex: 20, direction: "right" as Direction },
+      { x: "200px", y: "25px", zIndex: 10, direction: "left" as Direction },
+    ];
+
+    // Desktop positions - wider spread
+    const desktopPositions = [
       { x: "-320px", y: "15px", zIndex: 50, direction: "left" as Direction },
       { x: "-160px", y: "32px", zIndex: 40, direction: "left" as Direction },
       { x: "0px", y: "8px", zIndex: 30, direction: "right" as Direction },
       { x: "160px", y: "22px", zIndex: 20, direction: "right" as Direction },
       { x: "320px", y: "44px", zIndex: 10, direction: "left" as Direction },
     ];
+
     return {
       ...photo,
       order: index,
-      ...positions[index],
+      mobilePosition: mobilePositions[index],
+      desktopPosition: desktopPositions[index],
+      direction: mobilePositions[index].direction,
     };
   });
 
@@ -97,7 +110,7 @@ export const PhotoGallery = ({
       <h3 className="z-20 mx-auto max-w-2xl justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text py-3 text-center text-3xl sm:text-4xl md:text-7xl text-transparent px-4">
         Welcome to Our <span className="text-amber-500">Gallery</span>
       </h3>
-      <div className="relative mb-8 h-[280px] sm:h-[350px] w-full items-center justify-center lg:flex px-4 sm:px-0">
+      <div className="relative mb-4 sm:mb-6 h-[240px] sm:h-[280px] lg:h-[350px] w-full items-center justify-center lg:flex px-4 sm:px-0">
         <motion.div
           className="relative mx-auto flex w-full max-w-7xl justify-center"
           initial={{ opacity: 0 }}
@@ -110,26 +123,30 @@ export const PhotoGallery = ({
             initial="hidden"
             animate={isLoaded ? "visible" : "hidden"}
           >
-            <div className="relative h-[180px] w-[180px] sm:h-[220px] sm:w-[220px]">
+            <div className="relative h-[140px] w-[140px] sm:h-[180px] sm:w-[180px] lg:h-[220px] lg:w-[220px]">
               {[...photos].reverse().map((photo) => (
                 <motion.div
                   key={photo.id}
                   className="absolute left-0 top-0"
-                  style={{ zIndex: photo.zIndex }}
+                  style={{ zIndex: photo.mobilePosition.zIndex }}
                   variants={photoVariants}
                   custom={{
-                    x: photo.x,
-                    y: photo.y,
+                    x: typeof window !== 'undefined' && window.innerWidth < 1024
+                      ? photo.mobilePosition.x
+                      : photo.desktopPosition.x,
+                    y: typeof window !== 'undefined' && window.innerWidth < 1024
+                      ? photo.mobilePosition.y
+                      : photo.desktopPosition.y,
                     order: photo.order,
                   }}
                 >
                   <Photo
-                    width={180}
-                    height={180}
+                    width={140}
+                    height={140}
                     src={photo.src}
                     alt="Jewelry AI Portfolio"
                     direction={photo.direction}
-                    className="sm:!w-[220px] sm:!h-[220px]"
+                    className="sm:!w-[180px] sm:!h-[180px] lg:!w-[220px] lg:!h-[220px]"
                   />
                 </motion.div>
               ))}

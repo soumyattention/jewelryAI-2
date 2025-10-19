@@ -4,8 +4,6 @@ import HomePage from './pages/HomePage';
 import QAPage from './pages/QAPage';
 import Gallery from './pages/Gallery';
 import GalleryX from './pages/GalleryX';
-import FurniturePage from './pages/FurniturePage';
-import RunPage from './pages/RunPage';
 import AdminPage from './pages/AdminPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import RefundsPolicy from './pages/RefundsPolicy';
@@ -14,7 +12,6 @@ import TestPage from './pages/TestPage';
 import CloudinaryTestPage from './pages/CloudinaryTestPage';
 import CloudinaryOptimizationDemo from './pages/CloudinaryOptimizationDemo';
 import CustomPaymentPage from './pages/CustomPaymentPage';
-import SurgAIPage from './pages/SurgAIPage';
 import PricingPage from './pages/PricingPage';
 
 function App() {
@@ -26,9 +23,7 @@ function App() {
         <Route path="/portfolio" element={<Navigate to="/galleryx" replace />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/galleryx" element={<GalleryX />} />
-        <Route path="/run" element={<RunPage />} />
         <Route path="/admin" element={<AdminPage />} />
-        <Route path="/furniture" element={<FurniturePage />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/refunds" element={<RefundsPolicy />} />
         <Route path="/tos" element={<TermsOfService />} />
@@ -36,7 +31,6 @@ function App() {
         <Route path="/cloudinary-test" element={<CloudinaryTestPage />} />
         <Route path="/cloudinary-demo" element={<CloudinaryOptimizationDemo />} />
         <Route path="/custom" element={<CustomPaymentPage />} />
-        <Route path="/surgai" element={<SurgAIPage />} />
         <Route path="/pricing" element={<PricingPage />} />
       </Routes>
     </div>
