@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://jewelryai.app/gallery</loc>
+    <video:video>
+      <video:thumbnail_loc>https://jewelryai.app/og-image.jpg</video:thumbnail_loc>
+      <video:title>AI-Generated Jewelry Videos - Jewelry AI</video:title>
+      <video:description>Professional AI-generated jewelry videos showcasing hyper-realistic on-model photography for jewelry marketing and e-commerce</video:description>
+      <video:publication_date>2025-10-19T13:11:03.860Z</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:tag>jewelry video</video:tag>
+      <video:tag>AI photography</video:tag>
+      <video:tag>jewelry marketing</video:tag>
+      <video:category>Jewelry Marketing</video:category>
+    </video:video>
+  </url>
+</urlset>

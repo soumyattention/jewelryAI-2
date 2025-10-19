@@ -17,10 +17,10 @@ import Footer from '../components/Footer';
 const QAPage = () => {
   return (
     <>
-      <SEOHead 
-        title="Jewelry AI - AI Jewelry Photography & Video Studio | 90% Cost Reduction"
-        description="Transform your jewelry photos into stunning, hyper-realistic on-model photography and videos with AI. 95% accuracy, 90% cost savings vs traditional photoshoots. Try for $99!"
-        keywords="AI jewelry photography, jewelry marketing, product photography, jewelry videos, AI photoshoot, jewelry advertising, e-commerce photography, jewelry AI, automated jewelry photography"
+      <SEOHead
+        title="Jewelry Photography Questions Answered | AI Photography Guide | Jewelry AI"
+        description="Get answers to all your jewelry photography questions. Learn how AI photography works, pricing details, turnaround times, and quality guarantees. Free consultation available."
+        keywords="jewelry photography questions, AI photography FAQ, jewelry photography guide, how does AI jewelry photography work, jewelry photography consultation"
         canonicalUrl="https://jewelryai.app/qa"
       />
       <Header />

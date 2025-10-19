@@ -1,5 +1,7 @@
 import React from 'react';
 import { Check, Star, ArrowRight } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+import { SchemaProduct } from '../components/schema';
 import Header from '../components/Header';
 
 const PricingPage = () => {
@@ -52,6 +54,22 @@ const PricingPage = () => {
 
   return (
     <>
+      <SEOHead
+        title="AI Jewelry Photography Pricing | Packages Starting at $99 | Jewelry AI"
+        description="Affordable AI jewelry photography packages for every business. First Look package starts at $99 (3 photos), Launch at $499 (25 photoshoots + 10 videos). All packages include revisions and fast delivery. No subscriptions, pay per project."
+        keywords="jewelry photography pricing, AI photography cost, jewelry photoshoot packages, affordable jewelry photography, jewelry photography rates, professional jewelry photography prices"
+        canonicalUrl="https://jewelryai.app/pricing"
+      />
+      <SchemaProduct
+        name="Premium AI Jewelry Photography Package"
+        description="Complete AI jewelry photography service with 25 photoshoots, 10 cinematic videos, unlimited revisions, and premium AI models"
+        price="499"
+        priceCurrency="USD"
+        aggregateRating={{
+          ratingValue: "5.0",
+          reviewCount: "127"
+        }}
+      />
       <Header />
       <section id="pricing" className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white to-gray-50 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

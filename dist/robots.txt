@@ -1,0 +1,41 @@
+# JewelryAI - Robots.txt
+# Allow all crawlers to access public content
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /test
+Disallow: /cloudinary-test
+Disallow: /cloudinary-demo
+Disallow: /custom
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://jewelryai.app/sitemap.xml
+Sitemap: https://jewelryai.app/sitemap-images.xml
+Sitemap: https://jewelryai.app/sitemap-videos.xml
+
+# Block common bad bots
+User-agent: AhrefsBot
+Crawl-delay: 2
+
+User-agent: SemrushBot
+Crawl-delay: 2
+
+# Allow Google, Bing, and other major search engines full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

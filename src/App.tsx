@@ -1,5 +1,6 @@
-import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { logPageView } from './utils/analytics';
 import HomePage from './pages/HomePage';
 import QAPage from './pages/QAPage';
 import Gallery from './pages/Gallery';
@@ -15,6 +16,13 @@ import CustomPaymentPage from './pages/CustomPaymentPage';
 import PricingPage from './pages/PricingPage';
 
 function App() {
+  const location = useLocation();
+
+  // Track page views on route changes
+  useEffect(() => {
+    logPageView();
+  }, [location]);
+
   return (
     <div className="min-h-screen bg-white font-inter flex flex-col">
       <Routes>

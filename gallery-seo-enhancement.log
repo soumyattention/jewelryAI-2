@@ -1,0 +1,131 @@
+🚀 Gemini Vision Gallery SEO Enhancement
+
+📁 Found 37 gallery items
+
+🖼️  Processing 37 images
+
+⚠️  Processing 37 items (FULL RUN)
+⚠️  Estimated time: 2 minutes
+⚠️  Estimated API cost: $0.07
+
+
+🔍 [1] Analyzing...
+✅ [1] ring - classic
+
+🔍 [3] Analyzing...
+✅ [3] ring|necklace|bracelet - luxury|modern
+
+🔍 [10] Analyzing...
+✅ [10] ring|necklace|earrings|bracelet - modern
+
+🔍 [14] Analyzing...
+✅ [14] bracelet - luxury
+
+🔍 [30] Analyzing...
+✅ [30] ring|necklace|bracelet - luxury
+
+🔍 [33] Analyzing...
+✅ [33] ring|earrings - luxury
+
+🔍 [35] Analyzing...
+✅ [35] necklace - luxury
+
+🔍 [38] Analyzing...
+✅ [38] necklace - luxury
+
+🔍 [42] Analyzing...
+✅ [42] ring|bracelet - modern
+
+🔍 [56] Analyzing...
+✅ [56] ring|bracelet|watch - classic|luxury
+
+🔍 [58] Analyzing...
+✅ [58] earrings - modern
+
+🔍 [65] Analyzing...
+✅ [65] ring|earrings - modern
+
+🔍 [68] Analyzing...
+✅ [68] ring - classic
+
+🔍 [80] Analyzing...
+✅ [80] earrings - classic
+
+🔍 [82] Analyzing...
+✅ [82] earrings - art deco
+
+🔍 [103] Analyzing...
+✅ [103] ring - classic
+
+🔍 [107] Analyzing...
+✅ [107] necklace|bracelet - modern
+
+🔍 [114] Analyzing...
+✅ [114] ring - modern
+
+🔍 [117] Analyzing...
+✅ [117] ring - contemporary
+
+🔍 [126] Analyzing...
+❌ [126] Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent: [429 Too Many Requests] You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_requests_per_model","quotaId":"GenerateRequestsPerMinutePerProjectPerModel","quotaDimensions":{"location":"global","model":"gemini-2.0-flash-exp"},"quotaValue":"10"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"52s"}]
+
+🔍 [128] Analyzing...
+❌ [128] Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent: [429 Too Many Requests] You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_requests_per_model","quotaId":"GenerateRequestsPerMinutePerProjectPerModel","quotaDimensions":{"location":"global","model":"gemini-2.0-flash-exp"},"quotaValue":"10"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"50s"}]
+
+🔍 [130] Analyzing...
+❌ [130] Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent: [429 Too Many Requests] You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_requests_per_model","quotaId":"GenerateRequestsPerMinutePerProjectPerModel","quotaDimensions":{"location":"global","model":"gemini-2.0-flash-exp"},"quotaValue":"10"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"48s"}]
+
+🔍 [132] Analyzing...
+❌ [132] Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent: [429 Too Many Requests] You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_requests_per_model","quotaId":"GenerateRequestsPerMinutePerProjectPerModel","quotaDimensions":{"model":"gemini-2.0-flash-exp","location":"global"},"quotaValue":"10"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"45s"}]
+
+🔍 [137] Analyzing...
+❌ [137] Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent: [429 Too Many Requests] You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_requests_per_model","quotaId":"GenerateRequestsPerMinutePerProjectPerModel","quotaDimensions":{"location":"global","model":"gemini-2.0-flash-exp"},"quotaValue":"10"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"44s"}]
+
+🔍 [142] Analyzing...
+✅ [142] ring - luxury
+
+🔍 [145] Analyzing...
+✅ [145] ring - modern
+
+🔍 [147] Analyzing...
+✅ [147] ring - luxury
+
+🔍 [149] Analyzing...
+✅ [149] ring - luxury
+
+🔍 [151] Analyzing...
+✅ [151] ring - luxury
+
+🔍 [156] Analyzing...
+✅ [156] ring - modern
+
+🔍 [159] Analyzing...
+✅ [159] ring - vintage
+
+🔍 [163] Analyzing...
+✅ [163] ring - classic
+
+🔍 [166] Analyzing...
+✅ [166] ring|bracelet - luxury|classic
+
+🔍 [170] Analyzing...
+✅ [170] ring - luxury
+
+🔍 [173] Analyzing...
+✅ [173] brooch - luxury
+
+🔍 [178] Analyzing...
+❌ [178] Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent: [429 Too Many Requests] You exceeded your current quota. Please migrate to Gemini 2.0 Flash Preview (Image Generation) (models/gemini-2.0-flash-preview-image-generation) for higher quota limits. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_requests_per_model","quotaId":"GenerateRequestsPerMinutePerProjectPerModel","quotaDimensions":{"location":"global","model":"gemini-2.0-flash-exp"},"quotaValue":"10"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"47s"}]
+
+🔍 [185] Analyzing...
+✅ [185] ring - classic
+
+✅ Complete! Saved to gallery-enhanced-metadata.json
+
+🎯 Sample:
+ID: 1
+Alt: Close-up of a woman's hand displaying an oval halo diamond engagement ring held by a man, soft natural light, French manicure. AI-generated jewelry photography.
+Type: ring
+Keywords: engagement ring, diamond ring photography, jewelry photography, AI jewelry photography, oval halo ring
+
+📋 Next: Review the JSON file, then run apply-metadata script

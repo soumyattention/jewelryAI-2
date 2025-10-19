@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run generate-sitemaps && vite build",
+    "build:no-sitemap": "vite build",
+    "generate-sitemaps": "node scripts/generate-sitemaps.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -23,6 +25,7 @@
     "framer-motion": "^10.16.16",
     "gsap": "^3.12.5",
     "lucide-react": "^0.344.0",
+    "openai": "^6.5.0",
     "react": "^18.3.1",
     "react-confetti": "^6.1.0",
     "react-dom": "^18.3.1",

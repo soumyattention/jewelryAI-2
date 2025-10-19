@@ -1,5 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
+import { SchemaOrganization, SchemaFAQ, homepageFAQs, SchemaService } from '../components/schema';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Comparison from '../components/Comparison';
@@ -16,12 +17,17 @@ import Footer from '../components/Footer';
 const HomePage = () => {
   return (
     <>
-      <SEOHead 
-        title="Jewelry AI - AI Jewelry Photography & Video Studio | 90% Cost Reduction"
-        description="Transform your jewelry photos into stunning, hyper-realistic on-model photography and videos with AI. 95% accuracy, 90% cost savings vs traditional photoshoots. Try for $99!"
-        keywords="AI jewelry photography, jewelry marketing, product photography, jewelry videos, AI photoshoot, jewelry advertising, e-commerce photography, jewelry AI, automated jewelry photography"
+      <SEOHead
+        title="AI Jewelry Photography & Video Studio | 90% Cost Reduction | Jewelry AI"
+        description="Transform your jewelry photos into stunning, hyper-realistic on-model photography and videos with AI. Save 90% on traditional photoshoots. Get professional results in 48 hours. Trusted by 500+ jewelry brands."
+        keywords="AI jewelry photography, jewelry video production, AI photoshoot, jewelry marketing, product photography, jewelry advertising, e-commerce jewelry photos, AI model photography, virtual jewelry photography, jewelry content creation"
         canonicalUrl="https://jewelryai.app"
       />
+      {/* Enhanced Schema Markup for SEO */}
+      <SchemaOrganization />
+      <SchemaService />
+      <SchemaFAQ faqs={homepageFAQs} />
+
       <Header />
       <Hero />
       <Comparison />
