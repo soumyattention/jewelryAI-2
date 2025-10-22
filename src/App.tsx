@@ -15,6 +15,8 @@ import CloudinaryOptimizationDemo from './pages/CloudinaryOptimizationDemo';
 import CustomPaymentPage from './pages/CustomPaymentPage';
 import PricingPage from './pages/PricingPage';
 import AIvsTraditional from './pages/AIvsTraditional';
+import HowItWorks from './pages/HowItWorks';
+import ShopifyJewelryPhotography from './pages/ShopifyJewelryPhotography';
 
 function App() {
   const location = useLocation();
@@ -42,6 +44,8 @@ function App() {
         <Route path="/custom" element={<CustomPaymentPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/ai-vs-traditional-photography" element={<AIvsTraditional />} />
+        <Route path="/how-it-works" element={<HowItWorks />} />
+        <Route path="/shopify-jewelry-photography" element={<ShopifyJewelryPhotography />} />
       </Routes>
     </div>
   );
