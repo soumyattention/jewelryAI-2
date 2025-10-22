@@ -1,0 +1,101 @@
+{
+  "serviceProvider": {
+    "name": "JewelryAI",
+    "url": "https://jewelryai.app",
+    "description": "AI-powered jewelry photography and videography service",
+    "serviceType": "AI Jewelry Photography"
+  },
+  "packages": [
+    {
+      "name": "First Look",
+      "price": 99,
+      "currency": "USD",
+      "description": "Perfect for quality testing",
+      "features": {
+        "aiEditorialPhotos": 5,
+        "aiCinematicVideos": 1,
+        "jewelryArticles": 3,
+        "turnaroundTime": "7 days",
+        "revisions": 1,
+        "resolution": "1080p",
+        "fileFormats": ["JPG", "PNG"],
+        "aiModelQuality": "Standard",
+        "commercialLicense": true,
+        "customPoses": false
+      },
+      "pricePerPhoto": 19.80
+    },
+    {
+      "name": "Launch",
+      "price": 499,
+      "currency": "USD",
+      "description": "Your perfect pivot to AI",
+      "mostPopular": true,
+      "features": {
+        "aiEditorialPhotos": 25,
+        "aiCinematicVideos": 10,
+        "turnaroundTime": "3-5 days",
+        "revisions": "Unlimited",
+        "resolution": "4K",
+        "fileFormats": ["JPG", "PNG", "TIFF"],
+        "aiModelQuality": "Premium (Natural)",
+        "commercialLicense": true,
+        "customPoses": true,
+        "customStyles": true,
+        "referenceModel": true
+      },
+      "pricePerPhoto": 19.96
+    },
+    {
+      "name": "The Collection",
+      "price": 799,
+      "currency": "USD",
+      "description": "One month of highest-quality contents",
+      "features": {
+        "aiEditorialPhotos": 60,
+        "aiCinematicVideos": 20,
+        "turnaroundTime": "2-3 days",
+        "revisions": "Unlimited",
+        "resolution": "4K",
+        "fileFormats": ["JPG", "PNG", "TIFF", "RAW"],
+        "aiModelQuality": "Premium (Natural)",
+        "commercialLicense": true,
+        "customPoses": true,
+        "customStyles": true,
+        "referenceModel": true,
+        "videoLength": "30s per video",
+        "videoResolution": "1080p"
+      },
+      "pricePerPhoto": 13.32
+    }
+  ],
+  "comparison": {
+    "aiPhotography": {
+      "costRange": "99-799 USD",
+      "turnaroundTime": "2-7 days",
+      "modelFees": 0,
+      "studioFees": 0,
+      "revisions": "1 to Unlimited",
+      "consistency": "100%",
+      "scalability": "Instant"
+    },
+    "traditionalPhotography": {
+      "costRange": "500-5000+ USD",
+      "turnaroundTime": "2-4 weeks",
+      "modelFees": "200-1000 USD/day",
+      "studioFees": "200-2000 USD/day",
+      "revisions": "Limited (extra cost)",
+      "consistency": "Varies",
+      "scalability": "Limited"
+    },
+    "annualSavings": {
+      "for10Photoshoots": {
+        "aiCost": 4990,
+        "traditionalCost": 15000,
+        "savings": 10010,
+        "savingsPercentage": 67
+      }
+    }
+  },
+  "lastUpdated": "2025-10-19"
+}

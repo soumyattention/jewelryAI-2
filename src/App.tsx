@@ -14,6 +14,7 @@ import CloudinaryTestPage from './pages/CloudinaryTestPage';
 import CloudinaryOptimizationDemo from './pages/CloudinaryOptimizationDemo';
 import CustomPaymentPage from './pages/CustomPaymentPage';
 import PricingPage from './pages/PricingPage';
+import AIvsTraditional from './pages/AIvsTraditional';
 
 function App() {
   const location = useLocation();
@@ -40,6 +41,7 @@ function App() {
         <Route path="/cloudinary-demo" element={<CloudinaryOptimizationDemo />} />
         <Route path="/custom" element={<CustomPaymentPage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/ai-vs-traditional-photography" element={<AIvsTraditional />} />
       </Routes>
     </div>
   );

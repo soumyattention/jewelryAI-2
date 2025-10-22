@@ -1,0 +1,97 @@
+{
+  "service": "JewelryAI",
+  "tagline": "AI-Powered Jewelry Photography & Videography",
+  "coreFeatures": [
+    {
+      "name": "AI Editorial Photography",
+      "description": "Create Vogue-style editorial jewelry photos with AI models",
+      "keywords": ["AI editorial jewelry photo", "AI Vogue editorial", "AI fashion jewelry photography"],
+      "benefits": ["Professional quality", "Magazine-ready", "Editorial styling"]
+    },
+    {
+      "name": "AI Jewelry Models",
+      "description": "Put your jewelry on virtual AI models - no model hiring needed",
+      "keywords": ["AI jewelry model", "put jewelry on AI model", "virtual jewelry model", "AI model wearing jewelry"],
+      "benefits": ["No model fees", "Unlimited variety", "Instant availability"]
+    },
+    {
+      "name": "AI Cinematic Videos",
+      "description": "30-second professional jewelry videos with AI models",
+      "keywords": ["AI jewelry video", "AI cinematic jewelry", "AI editorial video"],
+      "benefits": ["Video content", "Social media ready", "Engaging format"]
+    },
+    {
+      "name": "4K Resolution",
+      "description": "Photorealistic 4K images indistinguishable from traditional photography",
+      "keywords": ["4K jewelry photos", "high-resolution jewelry photography"],
+      "benefits": ["Print-ready", "E-commerce optimized", "Zoom-friendly"]
+    },
+    {
+      "name": "Fast Turnaround",
+      "description": "2-7 day delivery vs 2-4 weeks for traditional photography",
+      "keywords": ["fast jewelry photography", "quick jewelry photoshoot"],
+      "benefits": ["Rapid delivery", "Rush available", "Meet deadlines"]
+    },
+    {
+      "name": "Unlimited Revisions",
+      "description": "Premium packages include unlimited revisions at no extra cost",
+      "keywords": ["unlimited revisions jewelry photography"],
+      "benefits": ["Perfect results", "No extra fees", "Complete satisfaction"]
+    },
+    {
+      "name": "Custom Styles",
+      "description": "Bring your reference model, pose, style, or any creative vision",
+      "keywords": ["custom jewelry photography", "reference model jewelry"],
+      "benefits": ["Brand consistency", "Unique aesthetic", "Full customization"]
+    },
+    {
+      "name": "Commercial License",
+      "description": "Full commercial rights included - use anywhere without restrictions",
+      "keywords": ["commercial jewelry photography", "royalty-free jewelry photos"],
+      "benefits": ["No royalties", "Unlimited usage", "Full ownership"]
+    }
+  ],
+  "technicalSpecs": {
+    "imageFormats": ["JPG", "PNG", "TIFF", "RAW"],
+    "videoFormats": ["MP4", "MOV"],
+    "resolutions": {
+      "photos": ["1080p", "4K"],
+      "videos": ["1080p", "4K"]
+    },
+    "aiModels": {
+      "standard": "AI-generated models with professional quality",
+      "premium": "Photorealistic AI models indistinguishable from real models"
+    },
+    "deliveryMethods": ["Cloud download", "Direct link", "File transfer"],
+    "supportedJewelryTypes": [
+      "Rings",
+      "Necklaces",
+      "Earrings",
+      "Bracelets",
+      "Watches",
+      "Brooches",
+      "Pendants",
+      "Anklets",
+      "Custom jewelry"
+    ]
+  },
+  "useCases": [
+    "E-commerce product photography",
+    "Social media content (Instagram, TikTok, Pinterest)",
+    "Editorial magazine features",
+    "Website hero images",
+    "Email marketing campaigns",
+    "Print catalogs",
+    "Amazon listings",
+    "Shopify store photos",
+    "Advertising campaigns",
+    "Lookbook creation"
+  ],
+  "integrations": {
+    "ecommercePlatforms": ["Shopify", "WooCommerce", "Magento", "BigCommerce", "Amazon Seller Central"],
+    "socialMedia": ["Instagram", "Facebook", "Pinterest", "TikTok"],
+    "marketingTools": ["Mailchimp", "Klaviyo", "Canva"],
+    "cloudStorage": ["Google Drive", "Dropbox", "OneDrive"]
+  },
+  "lastUpdated": "2025-10-19"
+}

@@ -21,6 +21,7 @@ const STATIC_PAGES = [
   { loc: '/', changefreq: 'daily', priority: 1.0 },
   { loc: '/pricing', changefreq: 'weekly', priority: 0.9 },
   { loc: '/gallery', changefreq: 'daily', priority: 0.9 },
+  { loc: '/ai-vs-traditional-photography', changefreq: 'weekly', priority: 0.9 },
   { loc: '/qa', changefreq: 'weekly', priority: 0.8 },
   { loc: '/privacy', changefreq: 'monthly', priority: 0.3 },
   { loc: '/refunds', changefreq: 'monthly', priority: 0.3 },
