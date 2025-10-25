@@ -1,7 +1,7 @@
 import React from 'react';
-import { Check, Star, ArrowRight, Clock, Image, Video, Zap, RefreshCw } from 'lucide-react';
+import { Check, Star, ArrowRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-import { SchemaProduct, SchemaFAQ } from '../components/schema';
+import { SchemaProduct } from '../components/schema';
 import Header from '../components/Header';
 
 const PricingPage = () => {
@@ -82,33 +82,6 @@ const PricingPage = () => {
       },
       cta: 'Start Your Collection',
       popular: false
-    }
-  ];
-
-  const pricingFAQs = [
-    {
-      question: "How does AI jewelry photography work?",
-      answer: "Upload your jewelry photos, choose your preferred AI model and setting, and receive professional editorial-quality photos within 2-7 days. Our AI analyzes your jewelry and creates photorealistic images with virtual models in various poses and backgrounds."
-    },
-    {
-      question: "Is AI jewelry photography as good as traditional photography?",
-      answer: "Yes. Our AI-generated photos are indistinguishable from traditional photography and cost 80-90% less. You get the same professional quality without hiring models, photographers, or studios. Perfect for e-commerce, social media, and marketing."
-    },
-    {
-      question: "What file formats do I receive?",
-      answer: "First Look package includes JPG and PNG. Launch package includes JPG, PNG, and TIFF. The Collection package includes all formats plus RAW files. All images are high-resolution and ready for commercial use."
-    },
-    {
-      question: "Can I use the photos for commercial purposes?",
-      answer: "Yes. All packages include full commercial licensing. You own the photos and can use them for e-commerce websites, social media, advertising, catalogs, and any marketing materials without restrictions or royalty fees."
-    },
-    {
-      question: "How long does it take to receive my photos?",
-      answer: "First Look: 7 days. Launch: 3-5 days. The Collection: 2-3 days. Rush delivery available for urgent projects. You'll receive previews within 24-48 hours for feedback before final delivery."
-    },
-    {
-      question: "What if I'm not satisfied with the results?",
-      answer: "Launch and Collection packages include unlimited revisions until you're 100% satisfied. First Look includes 1 revision. We also offer a satisfaction guarantee - if we can't meet your expectations, we'll refund your payment."
     }
   ];
 
@@ -251,193 +224,8 @@ const PricingPage = () => {
           </div>
         </div>
 
-        {/* Detailed Feature Comparison Table */}
-        <div className="mt-16 sm:mt-20">
-          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8">
-            Compare All Features
-          </h3>
-          <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
-              <thead className="bg-gradient-to-r from-emerald-500 to-green-600">
-                <tr>
-                  <th className="px-6 py-4 text-left text-white font-semibold">Feature</th>
-                  <th className="px-6 py-4 text-center text-white font-semibold">First Look<br/><span className="text-sm font-normal">$99</span></th>
-                  <th className="px-6 py-4 text-center text-white font-semibold bg-emerald-600">Launch<br/><span className="text-sm font-normal">$499</span></th>
-                  <th className="px-6 py-4 text-center text-white font-semibold">The Collection<br/><span className="text-sm font-normal">$799</span></th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium flex items-center">
-                    <Image className="w-5 h-5 mr-2 text-emerald-600" />
-                    AI Editorial Photos
-                  </td>
-                  <td className="px-6 py-4 text-center text-gray-700">5</td>
-                  <td className="px-6 py-4 text-center text-gray-900 font-semibold bg-emerald-50">25</td>
-                  <td className="px-6 py-4 text-center text-gray-700">60</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium flex items-center">
-                    <Video className="w-5 h-5 mr-2 text-emerald-600" />
-                    AI Cinematic Videos
-                  </td>
-                  <td className="px-6 py-4 text-center text-gray-700">1</td>
-                  <td className="px-6 py-4 text-center text-gray-900 font-semibold bg-emerald-50">10</td>
-                  <td className="px-6 py-4 text-center text-gray-700">20</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium flex items-center">
-                    <Clock className="w-5 h-5 mr-2 text-emerald-600" />
-                    Turnaround Time
-                  </td>
-                  <td className="px-6 py-4 text-center text-gray-700">7 days</td>
-                  <td className="px-6 py-4 text-center text-gray-900 font-semibold bg-emerald-50">3-5 days</td>
-                  <td className="px-6 py-4 text-center text-gray-700">2-3 days</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium flex items-center">
-                    <RefreshCw className="w-5 h-5 mr-2 text-emerald-600" />
-                    Revision Requests
-                  </td>
-                  <td className="px-6 py-4 text-center text-gray-700">1</td>
-                  <td className="px-6 py-4 text-center text-gray-900 font-semibold bg-emerald-50">Unlimited</td>
-                  <td className="px-6 py-4 text-center text-gray-700">Unlimited</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium flex items-center">
-                    <Zap className="w-5 h-5 mr-2 text-emerald-600" />
-                    Resolution
-                  </td>
-                  <td className="px-6 py-4 text-center text-gray-700">1080p</td>
-                  <td className="px-6 py-4 text-center text-gray-900 font-semibold bg-emerald-50">4K</td>
-                  <td className="px-6 py-4 text-center text-gray-700">4K</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium">File Formats</td>
-                  <td className="px-6 py-4 text-center text-gray-700 text-sm">JPG, PNG</td>
-                  <td className="px-6 py-4 text-center text-gray-900 font-semibold bg-emerald-50 text-sm">JPG, PNG, TIFF</td>
-                  <td className="px-6 py-4 text-center text-gray-700 text-sm">JPG, PNG, TIFF, RAW</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium">AI Model Quality</td>
-                  <td className="px-6 py-4 text-center text-gray-700">Standard</td>
-                  <td className="px-6 py-4 text-center text-gray-900 font-semibold bg-emerald-50">Premium</td>
-                  <td className="px-6 py-4 text-center text-gray-700">Premium</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium">Custom Poses/Styles</td>
-                  <td className="px-6 py-4 text-center text-gray-700">—</td>
-                  <td className="px-6 py-4 text-center text-emerald-600 bg-emerald-50">
-                    <Check className="w-5 h-5 mx-auto" />
-                  </td>
-                  <td className="px-6 py-4 text-center text-emerald-600">
-                    <Check className="w-5 h-5 mx-auto" />
-                  </td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium">Commercial License</td>
-                  <td className="px-6 py-4 text-center text-emerald-600">
-                    <Check className="w-5 h-5 mx-auto" />
-                  </td>
-                  <td className="px-6 py-4 text-center text-emerald-600 bg-emerald-50">
-                    <Check className="w-5 h-5 mx-auto" />
-                  </td>
-                  <td className="px-6 py-4 text-center text-emerald-600">
-                    <Check className="w-5 h-5 mx-auto" />
-                  </td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium">Price per Photo</td>
-                  <td className="px-6 py-4 text-center text-gray-700">$19.80</td>
-                  <td className="px-6 py-4 text-center text-emerald-600 font-bold bg-emerald-50">$19.96</td>
-                  <td className="px-6 py-4 text-center text-gray-700">$13.32</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        {/* AI vs Traditional Comparison */}
-        <div className="mt-16 sm:mt-20">
-          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8">
-            AI Photography vs Traditional Photography
-          </h3>
-          <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
-              <thead className="bg-gradient-to-r from-gray-800 to-gray-900">
-                <tr>
-                  <th className="px-6 py-4 text-left text-white font-semibold">Comparison</th>
-                  <th className="px-6 py-4 text-center text-white font-semibold">JewelryAI (AI)</th>
-                  <th className="px-6 py-4 text-center text-white font-semibold">Traditional Photography</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium">Cost per Photoshoot</td>
-                  <td className="px-6 py-4 text-center text-emerald-600 font-bold">$99 - $799</td>
-                  <td className="px-6 py-4 text-center text-red-600 font-bold">$500 - $5,000+</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium">Turnaround Time</td>
-                  <td className="px-6 py-4 text-center text-emerald-600 font-bold">2-7 days</td>
-                  <td className="px-6 py-4 text-center text-gray-700">2-4 weeks</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium">Revisions</td>
-                  <td className="px-6 py-4 text-center text-emerald-600 font-bold">1 - Unlimited</td>
-                  <td className="px-6 py-4 text-center text-gray-700">Limited (extra cost)</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium">Model Variety</td>
-                  <td className="px-6 py-4 text-center text-emerald-600 font-bold">Unlimited AI models</td>
-                  <td className="px-6 py-4 text-center text-gray-700">Limited by availability</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium">Location/Studio Costs</td>
-                  <td className="px-6 py-4 text-center text-emerald-600 font-bold">$0 (included)</td>
-                  <td className="px-6 py-4 text-center text-gray-700">$200 - $2,000/day</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium">Consistency</td>
-                  <td className="px-6 py-4 text-center text-emerald-600 font-bold">100% consistent</td>
-                  <td className="px-6 py-4 text-center text-gray-700">Varies by shoot</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900 font-medium">Quality</td>
-                  <td className="px-6 py-4 text-center text-emerald-600 font-bold">Photorealistic 4K</td>
-                  <td className="px-6 py-4 text-center text-emerald-600 font-bold">Professional 4K</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="text-center text-gray-600 mt-6 text-sm">
-            *Cost savings of 80-90% compared to traditional photography while maintaining the same professional quality.
-          </p>
-        </div>
-
-        {/* FAQ Section */}
-        <div className="mt-16 sm:mt-20">
-          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8">
-            Frequently Asked Questions
-          </h3>
-          <div className="max-w-3xl mx-auto space-y-4">
-            {pricingFAQs.map((faq, index) => (
-              <details key={index} className="group bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <summary className="cursor-pointer px-6 py-4 font-semibold text-gray-900 flex justify-between items-center">
-                  <span>{faq.question}</span>
-                  <span className="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <div className="px-6 pb-4 text-gray-700">
-                  {faq.answer}
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-
         </div>
       </section>
-      <SchemaFAQ faqs={pricingFAQs} />
     </>
   );
 };
