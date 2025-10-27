@@ -3573,5 +3573,125 @@ alt: "AI-generated jewelry photography"
         src: "https://customer-ceouac30q8dlws1c.cloudflarestream.com/73fa55b85efe595a0a41ff6f69daafaf/downloads/default.mp4",
         alt: "AI-generated jewelry video",
         autoplay: true
+    },
+    {
+        id: 1040,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/x139.png?updatedAt=1761541631719",
+        alt: "AI-generated jewelry photography",
+        selected: true
+    },
+    {
+        id: 1041,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/x125.jpg?updatedAt=1761541632009",
+        alt: "AI-generated jewelry photography",
+        selected: true
+    },
+    {
+        id: 1042,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/x130.png?updatedAt=1761541635734",
+        alt: "AI-generated jewelry photography",
+        selected: true
+    },
+    {
+        id: 1043,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/x128.png?updatedAt=1761541636736",
+        alt: "AI-generated jewelry photography",
+        selected: true
+    },
+    {
+        id: 1044,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/x108.png?updatedAt=1761541638026",
+        alt: "AI-generated jewelry photography",
+        selected: true
+    },
+    {
+        id: 1045,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/rx10.png?updatedAt=1761541638931",
+        alt: "AI-generated jewelry photography",
+        selected: true
+    },
+    {
+        id: 1046,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/x127.png?updatedAt=1761541640108",
+        alt: "AI-generated jewelry photography",
+        selected: true
+    },
+    {
+        id: 1047,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/30-1.png?updatedAt=1761541641821",
+        alt: "AI-generated jewelry photography",
+        selected: true
+    },
+    {
+        id: 1048,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/36-1.png?updatedAt=1761541642096",
+        alt: "AI-generated jewelry photography",
+        selected: true
+    },
+    {
+        id: 1049,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/rm1.png?updatedAt=1761541642997",
+        alt: "AI-generated jewelry photography",
+        selected: true
+    },
+    {
+        id: 1050,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/rm2.png?updatedAt=1761541643511",
+        alt: "AI-generated jewelry photography",
+        selected: true
+    },
+    {
+        id: 1051,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/21-2.png?updatedAt=1761541643691",
+        alt: "AI-generated jewelry photography",
+        selected: true
+    },
+    {
+        id: 1052,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/22-1.png?updatedAt=1761541643888",
+        alt: "AI-generated jewelry photography",
+        selected: true
+    },
+    {
+        id: 1053,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/rx7.png?updatedAt=1761541644059",
+        alt: "AI-generated jewelry photography",
+        selected: true
+    },
+    {
+        id: 1054,
+        category: "photos",
+        type: "image",
+        src: "https://ik.imagekit.io/soumya3301/Featured/11-1.png?updatedAt=1761541644093",
+        alt: "AI-generated jewelry photography",
+        selected: true
     }
 ];
